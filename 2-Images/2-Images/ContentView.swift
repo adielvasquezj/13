@@ -11,16 +11,18 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Text("Hello, World!")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .foregroundColor(Color(#colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)))
-                .padding(.top)
-            Image(systemName: "recordingtape")
-                .font(.system(size: 80))
-                .shadow(color: .gray, radius: 10, y: 10)
-                .foregroundColor(Color(#colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)))
-            
+
+            Image("ixta")
+                .resizable()
+              //  .edgesIgnoringSafeArea(.all)
+              //  .scaledToFit()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 300)
+            //.clipped()
+               // .cornerRadius(10)
+                .clipShape(Capsule())
+                .opacity(0.8)
+                  
         }
         
     }
