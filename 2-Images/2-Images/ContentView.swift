@@ -10,20 +10,43 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
+      
 
             Image("ixta")
                 .resizable()
               //  .edgesIgnoringSafeArea(.all)
               //  .scaledToFit()
                 .aspectRatio(contentMode: .fill)
+              //  .padding([.top, .leading, .trailing])
                 .frame(width: 300)
-            //.clipped()
-               // .cornerRadius(10)
+                //.clipped()
+                // .cornerRadius(10)
                 .clipShape(Capsule())
-                .opacity(0.8)
-                  
-        }
+                .opacity(0.9)
+            .overlay(
+                /* .overlay(Image(systemName: "heart.fill"))
+                 .font(.system(size: 40))
+                 .foregroundColor(.red)
+                 .opacity(0.5) */
+                Text("Santiago Ixtayutla es un municipio indígena del Estado de Oaxaca")
+                
+                    
+                    .fontWeight(.bold)
+                    .font(.system(.headline, design: .rounded))
+                    
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(Color.gray)
+                    .cornerRadius(10)
+                    .opacity(0.7)
+                    .padding(), alignment: .bottom 
+                        
+                      
+            
+           
+
+      )
+     
         
     }
 }
