@@ -28,7 +28,7 @@ struct ContentView: View {
                  .font(.system(size: 40))
                  .foregroundColor(.red)
                  .opacity(0.5) */
-                Text("Santiago Ixtayutla es un municipio indígena del Estado de Oaxaca")
+             /*   Text("Santiago Ixtayutla es un municipio indígena del Estado de Oaxaca")
                 
                     
                     .fontWeight(.bold)
@@ -39,11 +39,20 @@ struct ContentView: View {
                     .background(Color.gray)
                     .cornerRadius(10)
                     .opacity(0.7)
-                    .padding(), alignment: .bottom 
+                    .padding(), alignment: .bottom
                         
-                      
+                   */
             
-           
+          Capsule()
+            .foregroundColor(.gray)
+            .opacity(0.5)
+                .overlay(
+                    Text("Santiago Ixtayutla")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                    .frame(width: 259)
+                )
 
       )
      
