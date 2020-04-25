@@ -32,7 +32,7 @@ Cuyo administrador y responsable del tratamiento es la Unidad de Gobierno Digita
             .lineLimit(nil)
             .lineLimit(23)
            // .rotationEffect(.init(degrees: 36))
-            .rotation3DEffect(Angle(degrees: 50), axis: (x: 1, y: 0, z: 0))
+            .rotation3DEffect(Angle(degrees: 50), axis: (x: 0, y: 0, z: 0))
             .shadow(color: .green, radius: 1, x: 0, y: 19)
         
         
