@@ -12,22 +12,42 @@ struct ContentView: View {
     var body: some View {
         VStack {
             HeaderView()
-            VStack {
+            
+            HStack {
+                VStack {
+                    
+                    Text("Adios")
+                        .font(.system(size: 19, weight: .bold, design: .rounded))
+                        .foregroundColor(.white)
+                    
+                     Text("Bye")
+                    Text("Bye")
+                        .font(.system(size: 35, weight: .heavy, design: .rounded))
+                        .foregroundColor(.black)
+                    
+                    
+                }
+            .padding(20)
+            .background(Color(#colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)))
+                .cornerRadius(10)
                 
-                Text("Español")
-                    .font(.system(size: 19, weight: .bold, design: .rounded))
-                    .foregroundColor(.white)
-                
-                
-                Text("Mixteco")
-                    .font(.system(size: 21, weight: .heavy, design: .rounded))
-                    .foregroundColor(.white)
-                
-                
+                VStack {
+                        
+                        Text("Hola")
+                            .font(.system(size: 19, weight: .bold, design: .rounded))
+                            .foregroundColor(.white)
+                        
+                         Text("Hello")
+                        Text("Hello")
+                            .font(.system(size: 35, weight: .heavy, design: .rounded))
+                            .foregroundColor(.black)
+                        
+                        
+                    }
+                .padding(20)
+                .background(Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)))
+                    .cornerRadius(10)
             }
-        .padding(10)
-        .background(Color(#colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)))
-        .cornerRadius(12)
         }
         
     }
