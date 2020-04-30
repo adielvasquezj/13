@@ -13,41 +13,29 @@ struct ContentView: View {
         VStack {
             HeaderView()
             
-            HStack {
-                VStack {
+            HStack(spacing: 8) {
+        
+                TraductorView(titulo: "Bienvenido", ultimo: "xbxbx", textColor: .white, backgroundColor: .blue)
+                ZStack {
+                    TraductorView(titulo: "Bienvenido", ultimo: "xbxbx", textColor: .white, backgroundColor: .gray)
+                    Text("Santiago Ixtayutla")
+                        .font(.system(size: 17, design: .rounded))
+                        .foregroundColor(Color.white)
+                        .fontWeight(.black)
+                        .background(Color.yellow)
+                      //  .rotationEffect(.init(degrees: 21), anchor: .bottom)
                     
-                    Text("Adios")
-                        .font(.system(size: 19, weight: .bold, design: .rounded))
-                        .foregroundColor(.white)
+                    .cornerRadius(8)
+                    .offset(x: 0, y: -69)
                     
-                     Text("Bye")
-                    Text("Bye")
-                        .font(.system(size: 35, weight: .heavy, design: .rounded))
-                        .foregroundColor(.black)
-                    
-                    
+                    .padding(8)
                 }
-            .padding(20)
-            .background(Color(#colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)))
-                .cornerRadius(10)
-                
-                VStack {
-                        
-                        Text("Hola")
-                            .font(.system(size: 19, weight: .bold, design: .rounded))
-                            .foregroundColor(.white)
-                        
-                         Text("Hello")
-                        Text("Hello")
-                            .font(.system(size: 35, weight: .heavy, design: .rounded))
-                            .foregroundColor(.black)
-                        
-                        
-                    }
-                .padding(20)
-                .background(Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)))
-                    .cornerRadius(10)
+         
             }
+                
+            .padding(.horizontal)
+            
+            
         }
         
     }
@@ -72,5 +60,36 @@ struct HeaderView: View {
             
             
         }
+    }
+}
+
+var rana = "ranana"
+
+struct TraductorView: View {
+    
+    var titulo: String
+ //   var medio: String
+    var ultimo: String
+    var textColor: Color
+    var backgroundColor: Color
+    var body: some View {
+        VStack {
+            
+            Text(titulo)
+                .font(.system(size: 19, weight: .bold, design: .rounded))
+                .foregroundColor(textColor)
+            
+           // Text(medio)
+            Text(ultimo)
+                .font(.system(size: 35, weight: .heavy, design: .rounded))
+                .foregroundColor(.black)
+            
+            
+        } .frame(minWidth: 0, maxWidth: .infinity, minHeight: 100)
+        .padding(20)
+        .background(backgroundColor)
+        .cornerRadius(10)
+        
+ //   .padding(30)
     }
 }
