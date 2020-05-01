@@ -11,33 +11,34 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            HeaderView()
-            
-            HStack(spacing: 8) {
-        
-                TraductorView(titulo: "Bienvenido", ultimo: "xbxbx", textColor: .white, backgroundColor: .blue)
-                ZStack {
-                    TraductorView(titulo: "Bienvenido", ultimo: "xbxbx", textColor: .white, backgroundColor: .gray)
-                    Text("Santiago Ixtayutla")
-                        .font(.system(size: 17, design: .rounded))
-                        .foregroundColor(Color.white)
-                        .fontWeight(.black)
-                        .background(Color.yellow)
-                      //  .rotationEffect(.init(degrees: 21), anchor: .bottom)
-                    
-                    .cornerRadius(8)
-                    .offset(x: 0, y: -69)
-                    
-                    .padding(8)
-                }
-         
-            }
+            VStack {
+                HeaderView()
                 
-            .padding(.horizontal)
+                HStack(spacing: 8) {
             
-            
+                    TraductorView(titulo: "Bienvenido", ultimo: "xbxbx", textColor: .white, backgroundColor: .blue)
+                    ZStack {
+                        TraductorView(titulo: "Bienvenido", ultimo: "xbxbx", textColor: .white, backgroundColor: .gray)
+                       
+                    }
+             
+                }
+                    
+                .padding(.horizontal)
+                
+                ZStack {
+                    TraductorView(titulo: "Bienvenido", ultimo: "Welcome", textColor: .white, backgroundColor: Color(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)), icon: "lightbulb")
+                        
+                        .padding(.horizontal)
+                  
+                    
+                }
+            }
+              
+            .padding(.vertical)
+            Spacer()
         }
-        
+           // Spacer()
     }
 }
 
@@ -49,17 +50,16 @@ struct ContentView_Previews: PreviewProvider {
 
 struct HeaderView: View {
     var body: some View {
-        VStack(alignment: .center, spacing: 4) {
-            Text("Aprende Mixteco ")
-                .font(.system(size: 23, weight: .bold, design: .rounded))
-                .fontWeight(.black)
+        
+        HStack {
+            VStack(alignment: .leading, spacing: 4) {
+                Text("Aprende Mixteco ")
+                    .font(.system(size: 23, weight: .bold, design: .rounded))
+                    .fontWeight(.black)
+            }
+            Spacer()
             
-            Text(" 😁 ")
-                .font(.system(size: 23, weight: .bold, design: .rounded))
-                .fontWeight(.black)
-            
-            
-        }
+        }.padding()
     }
 }
 
@@ -72,8 +72,17 @@ struct TraductorView: View {
     var ultimo: String
     var textColor: Color
     var backgroundColor: Color
+    var icon : String?
     var body: some View {
         VStack {
+            
+            
+            icon.map({
+                Image(systemName:$0) //$0 = icon
+                .font(.largeTitle)
+                .foregroundColor(.white)
+            })
+            
             
             Text(titulo)
                 .font(.system(size: 19, weight: .bold, design: .rounded))
