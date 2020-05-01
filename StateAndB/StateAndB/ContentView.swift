@@ -8,31 +8,24 @@
 
 import SwiftUI
 
+private var isPlaying = false
+
 struct ContentView: View {
     var body: some View {
-        HStack {
-            
-            Image(systemName: "play.circle.fill")
-                .frame(width: 20, height: 20, alignment: .center)
-                .font(.system(size: 35))
-                
-                //   .cornerRadius(12)
-                .background(Color(#colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)))
-                .aspectRatio(contentMode: .fit)
-                .padding()
-            
-            Image(systemName: "stop.circle.fill")
-                .frame(width: 20, height: 20, alignment: .center)
-                .font(.system(size: 35))
-                
-                //   .cornerRadius(12)
-                .background(Color(#colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)))
-                .aspectRatio(contentMode: .fit)
-                .padding()
-            
+       
+
+        Button(action: {
+            print("Botón pulsado")
+        }) {
+            Image(systemName:isPlaying ? "stop.circle.fill" : "play.circle.fill")
+                .font(.system(size: 100))
+                .foregroundColor(isPlaying ? .red : .blue)
             
         }
+        
+        
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
