@@ -23,12 +23,12 @@ struct ContentView: View {
                 // .cornerRadius(10)
                 .clipShape(Capsule())
                 .opacity(0.9)
-            .overlay(
-                /* .overlay(Image(systemName: "heart.fill"))
+            .overlay(Image(systemName: "heart.fill"))
                  .font(.system(size: 40))
                  .foregroundColor(.red)
-                 .opacity(0.5) */
-             /*   Text("Santiago Ixtayutla es un municipio indígena del Estado de Oaxaca")
+                .opacity(0.5)
+             
+                .overlay( Text("Santiago Ixtayutla es un municipio indígena del Estado de Oaxaca")
                 
                     
                     .fontWeight(.bold)
@@ -41,9 +41,9 @@ struct ContentView: View {
                     .opacity(0.7)
                     .padding(), alignment: .bottom
                         
-                   */
+                   )
             
-          Capsule()
+         /* Capsule()
             .foregroundColor(.gray)
             .opacity(0.5)
                 .overlay(
@@ -52,9 +52,9 @@ struct ContentView: View {
                         .fontWeight(.bold)
                         .foregroundColor(.white)
                     .frame(width: 259)
-                )
+                )*/
 
-      )
+      
      
         
     }
