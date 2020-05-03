@@ -12,11 +12,14 @@ private var isPlaying = false
 
 struct ContentView: View {
     var body: some View {
-       
-
+        
+        
         Button(action: {
+            //Que debe hacer el boton
             print("Botón pulsado")
         }) {
+            //Como debe verse el boton
+            
             Image(systemName:isPlaying ? "stop.circle.fill" : "play.circle.fill")
                 .font(.system(size: 100))
                 .foregroundColor(isPlaying ? .red : .blue)

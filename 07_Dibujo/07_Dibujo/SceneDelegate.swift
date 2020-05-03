@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  Project0
+//  07_Dibujo
 //
-//  Created by kernel-root on 4/27/20.
+//  Created by kernel-root on 5/2/20.
 //  Copyright © 2020 kernel-root. All rights reserved.
 //
 

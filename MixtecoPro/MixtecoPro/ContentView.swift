@@ -23,12 +23,15 @@ struct ContentView: View {
                         
                         //  WholeViewWI()
                         
-                        HomeIxtaViewH(priEspaverdeH: "shdhd", segMixverdeH: "djdndndn", tercEspaverdeH: "dndnd", cuartMixverdeH: "dndndnd", priEspablancoH: "dndndnd", segMixblancoH: "dndndnd", tercEspablancoH: "dndnd", cuarMixblancoH: "dndnd", priEsparojoH: "dndnd", segMixrojoVH: "dmdmd", tercEsparojoH: "dndnd", cuarMixrojoH: "dndndn", numero: "1")
+                        HomeIxtaViewH(priEspaverdeH: "Ustedes", segMixverdeH: "Mando", tercEspaverdeH: "Ellos", cuartMixverdeH: "Machi", priEspablancoH: "Nosotros", segMixblancoH: "Mayo", tercEspablancoH: "Mío", cuarMixblancoH: "Chi mai", priEsparojoH: "Tuyo", segMixrojoVH: "Chi mau", tercEsparojoH: "Aceptar", cuarMixrojoH: "Ki'i", numero: "1")
                         
-                        WholeViewV(priEspaverdeV: "MMDMDMD", segMixverdeV: "SNSNNSNS", priEspablancoV: "SNSNSNSNNS", segMixblancoV: "SNSNSNS", priEsparojoV: "SNSNSNSNSNS", segMixrojoV: "SNSNSNSNS", number: "2")
-                        HomeIxtaViewH(priEspaverdeH: "shdhd", segMixverdeH: "djdndndn", tercEspaverdeH: "dndnd", cuartMixverdeH: "dndndnd", priEspablancoH: "dndndnd", segMixblancoH: "dndndnd", tercEspablancoH: "dndnd", cuarMixblancoH: "dndnd", priEsparojoH: "dndnd", segMixrojoVH: "dmdmd", tercEsparojoH: "dndnd", cuarMixrojoH: "dndndn", numero: "3")
+                        WholeViewV(priEspaverdeV: "Ustedes son mi equipo", segMixverdeV: "Mando ku equipu mai", priEspablancoV: "Ellos fueron a la tienda", segMixblancoV: "Machi icha'a tienda", priEsparojoV: "Yo quiero cantar", segMixrojoV: "Mai kuñi kata", number: "2")
                         
-                        WholeViewV(priEspaverdeV: "MMDMDMD", segMixverdeV: "SNSNNSNS", priEspablancoV: "SNSNSNSNNS", segMixblancoV: "SNSNSNS", priEsparojoV: "SNSNSNSNSNS", segMixrojoV: "SNSNSNSNS", number: "4")
+                        
+                        WholeViewV(priEspaverdeV: "Tú eres inteligente", segMixverdeV: "Mau ku inteligente", priEspablancoV: "Él ayuda mucho", segMixblancoV: "Mara ñi'i tyinty", priEsparojoV: "Ella horneó un pastel", segMixrojoV: "Make isa'a nu pastel", number: "3")
+                        
+                         WholeViewV(priEspaverdeV: "Nosotros estamos aquí", segMixverdeV: "Mayo nyayo  iya", priEspablancoV: "El carro es mío", segMixblancoV: "Carru mai ku", priEsparojoV: "Ése es el gato de ellos", segMixrojoV: "Vilu machi ku", number: "4")
+                        
                         
                         
                     }
