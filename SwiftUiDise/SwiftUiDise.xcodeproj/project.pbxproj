@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F213F90246214D3009CA76C /* First.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F213F8F246214D3009CA76C /* First.swift */; };
 		1F76A675246076FF00D12D88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F76A674246076FF00D12D88 /* AppDelegate.swift */; };
 		1F76A679246076FF00D12D88 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F76A678246076FF00D12D88 /* ContentView.swift */; };
 		1F76A67B2460770100D12D88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F76A67A2460770100D12D88 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F213F8F246214D3009CA76C /* First.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = First.swift; sourceTree = "<group>"; };
 		1F76A671246076FF00D12D88 /* SwiftUiDise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUiDise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F76A674246076FF00D12D88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F76A678246076FF00D12D88 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				1F76A674246076FF00D12D88 /* AppDelegate.swift */,
 				1F76A678246076FF00D12D88 /* ContentView.swift */,
+				1F213F8F246214D3009CA76C /* First.swift */,
 				1F76A67A2460770100D12D88 /* Assets.xcassets */,
 				1F76A67F2460770100D12D88 /* LaunchScreen.storyboard */,
 				1F76A6822460770100D12D88 /* Info.plist */,
@@ -145,6 +148,7 @@
 			files = (
 				1F76A675246076FF00D12D88 /* AppDelegate.swift in Sources */,
 				1F76A679246076FF00D12D88 /* ContentView.swift in Sources */,
+				1F213F90246214D3009CA76C /* First.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,11 +289,12 @@
 				DEVELOPMENT_TEAM = XJJUM5G2KA;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwiftUiDise/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftUiDise;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftUisnnsns;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -305,6 +310,7 @@
 				DEVELOPMENT_TEAM = XJJUM5G2KA;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwiftUiDise/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
