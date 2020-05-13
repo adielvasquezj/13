@@ -14,17 +14,44 @@ struct MenuView: View {
         VStack {
             Spacer()
             VStack(spacing: 16) {
+
+                Text("Adiel Jimenez")
+                    .font(.caption)
+                
+                Color.white
+                    .frame(width: 38, height: 6)
+                    .cornerRadius(3)
+                    .frame(width: 130, height: 6, alignment: .leading)
+                    .background(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)).opacity(0.08))
+                    .cornerRadius(3)
+                    .padding()
+                    .frame(width: 150, height: 24)
+                    .background(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)).opacity(0.1))
+                    .cornerRadius(12)
+                
+                
                 MenuRow(title: "Cuenta", icon: "gear")
                 MenuRow(title: "Suscripción", icon: "creditcard")
                 MenuRow(title: "Salir", icon: "person.crop.circle")
+          
                 
             }
             .frame(maxWidth: .infinity)
             .frame(height: 300)
-            .background(Color.white)
+            .background( LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), Color(#colorLiteral(red: 0.8116200566, green: 0.8882222772, blue: 0.9165163636, alpha: 1))]),  startPoint: /*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/, endPoint: /*@START_MENU_TOKEN@*/.trailing/*@END_MENU_TOKEN@*/))
             .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
-            .shadow(radius: 30)
+            .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
             .padding(.horizontal, 30)
+            .overlay(
+                
+                Image("avatar")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 60, height: 60)
+                    .clipShape(Circle())
+                    .offset(y: -150)
+                
+            )
         }
         .padding(.bottom, 30)
     }
@@ -37,14 +64,15 @@ struct MenuView_Previews: PreviewProvider {
 }
 
 struct MenuRow: View {
-      var title: String
-      var icon: String
+    var title: String
+    var icon: String
     var body: some View {
         HStack(spacing: 16) {
             Image(systemName: icon)
                 .font(.system(size: 20, weight: .light))
                 .imageScale(.large)
                 .frame(width: 32, height: 32)
+                .foregroundColor(Color(#colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)))
             Text(title)
                 .font(.system(size: 20, weight: .bold, design: .default))
                 .frame(width: 120, alignment: .leading)
