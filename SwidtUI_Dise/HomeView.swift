@@ -16,7 +16,8 @@ struct HomeView: View {
         VStack {
             HStack {
                 Text("Vista")
-                    .font(.system(size: 28, weight: .bold))
+                    // .font(.system(size: 28, weight: .bold))
+                    .modifier(CustomFontModifier(size: 28))
                 
                 Spacer()
                 
@@ -40,21 +41,11 @@ struct HomeView: View {
             .padding(.leading, 14)
             .padding(.bottom, 30)
             
-            HStack(spacing: 12.0) {
-                RingView(color1: #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), color2: #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1), width: 44, height: 44, percent: 68, show: .constant(true))
-                VStack(alignment: .leading, spacing: 4.0) {
-                    Text("Te faltan 3 horas")
-                        .font(.subheadline)
-                        .fontWeight(.bold)
-                    
-                      Text("Has leído 30 minutos hoy")
-                }
+            ScrollView(.horizontal, showsIndicators: false) {
+                WatchRingsView()
+                    .padding(.horizontal, 30)
+                .padding(.bottom, 30)
             }
-            .padding(8)
-            .background(Color.white)
-            .cornerRadius(20)
-            .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
-            .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20){
@@ -132,3 +123,42 @@ let sectionData = [
        Section(title: "Swift es un lenguage de programacion", text: "Sección 4", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Card1")), color: Color(#colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)))
 ]
 
+
+struct WatchRingsView: View {
+    var body: some View {
+        HStack(spacing: 30) {
+            HStack(spacing: 12.0) {
+                RingView(color1: #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1), color2: #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1), width: 44, height: 44, percent: 68, show: .constant(true))
+                VStack(alignment: .leading, spacing: 4.0) {
+                    Text("Te faltan 3 horas").bold().modifier(FontModifier(style: .subheadline))
+                    Text("Has leído 30 minutos hoy").modifier(FontModifier(style: .caption))
+                }
+                .modifier(FontModifier())
+            }
+            .padding(8)
+            .background(Color.white)
+            .cornerRadius(20)
+            .modifier(ShadowModifier())
+            
+            HStack(spacing: 12.0) {
+                RingView(color1: #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1), color2: #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1), width: 33, height: 33, percent: 54, show: .constant(true))
+                    
+                    .modifier(FontModifier())
+            }
+            .padding(8)
+            .background(Color.white)
+            .cornerRadius(20)
+            .modifier(ShadowModifier())
+            HStack(spacing: 12.0) {
+                RingView(color1: #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1), color2: #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1), width: 33, height: 33, percent: 54, show: .constant(true))
+                    
+                    .modifier(FontModifier())
+            }
+            .padding(8)
+            .background(Color.white)
+            .cornerRadius(20)
+            .modifier(ShadowModifier())
+            
+        }
+    }
+}
