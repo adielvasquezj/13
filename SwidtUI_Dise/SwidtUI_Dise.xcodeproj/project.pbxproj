@@ -19,6 +19,7 @@
 		5AE8AF0E246CA290006B1709 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8AF0D246CA290006B1709 /* HomeView.swift */; };
 		5AE8AF10246CCDF5006B1709 /* UpdateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8AF0F246CCDF5006B1709 /* UpdateList.swift */; };
 		5AE8AF12246CD864006B1709 /* UpdateDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8AF11246CD864006B1709 /* UpdateDetail.swift */; };
+		5AE8AF14246CE08B006B1709 /* UpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8AF13246CE08B006B1709 /* UpdateStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		5AE8AF0D246CA290006B1709 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		5AE8AF0F246CCDF5006B1709 /* UpdateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateList.swift; sourceTree = "<group>"; };
 		5AE8AF11246CD864006B1709 /* UpdateDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDetail.swift; sourceTree = "<group>"; };
+		5AE8AF13246CE08B006B1709 /* UpdateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				5AE8AF0D246CA290006B1709 /* HomeView.swift */,
 				5AE8AF0F246CCDF5006B1709 /* UpdateList.swift */,
 				5AE8AF11246CD864006B1709 /* UpdateDetail.swift */,
+				5AE8AF13246CE08B006B1709 /* UpdateStore.swift */,
 				5AE8AED6246B99EA006B1709 /* SwidtUI_Dise */,
 				5AE8AEED246B99F8006B1709 /* SwidtUI_DiseTests */,
 				5AE8AEF8246B99F8006B1709 /* SwidtUI_DiseUITests */,
@@ -283,6 +286,7 @@
 				5AE8AED8246B99EB006B1709 /* AppDelegate.swift in Sources */,
 				5AE8AF08246C7D9C006B1709 /* MenuView.swift in Sources */,
 				5AE8AF10246CCDF5006B1709 /* UpdateList.swift in Sources */,
+				5AE8AF14246CE08B006B1709 /* UpdateStore.swift in Sources */,
 				5AE8AF0A246C906A006B1709 /* Home.swift in Sources */,
 				5AE8AF0E246CA290006B1709 /* HomeView.swift in Sources */,
 				5AE8AEDC246B99EB006B1709 /* ContentView.swift in Sources */,
