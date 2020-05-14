@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A706647246D628B00482080 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A706646246D628B00482080 /* SceneDelegate.swift */; };
+		5A706649246D6A3800482080 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A706648246D6A3800482080 /* RingView.swift */; };
 		5AE8AED8246B99EB006B1709 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8AED7246B99EB006B1709 /* AppDelegate.swift */; };
 		5AE8AEDC246B99EB006B1709 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8AEDB246B99EB006B1709 /* ContentView.swift */; };
 		5AE8AEDE246B99F8006B1709 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AE8AEDD246B99F8006B1709 /* Assets.xcassets */; };
@@ -21,7 +23,6 @@
 		5AE8AF12246CD864006B1709 /* UpdateDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8AF11246CD864006B1709 /* UpdateDetail.swift */; };
 		5AE8AF14246CE08B006B1709 /* UpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8AF13246CE08B006B1709 /* UpdateStore.swift */; };
 		5AE8AF16246CE886006B1709 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8AF15246CE886006B1709 /* TabBar.swift */; };
-		5AF361F9246CEF260018711E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF361F8246CEF260018711E /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A706646246D628B00482080 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5A706648246D6A3800482080 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		5AE8AED4246B99EA006B1709 /* SwidtUI_Dise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwidtUI_Dise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE8AED7246B99EB006B1709 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5AE8AEDB246B99EB006B1709 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,7 +65,6 @@
 		5AE8AF11246CD864006B1709 /* UpdateDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDetail.swift; sourceTree = "<group>"; };
 		5AE8AF13246CE08B006B1709 /* UpdateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStore.swift; sourceTree = "<group>"; };
 		5AE8AF15246CE886006B1709 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
-		5AF361F8246CEF260018711E /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../../SwidtUI_Dise/SwidtUI_Dise/SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +97,7 @@
 			children = (
 				5AE8AF09246C906A006B1709 /* Home.swift */,
 				5AE8AF0D246CA290006B1709 /* HomeView.swift */,
-				5AF361F8246CEF260018711E /* SceneDelegate.swift */,
+				5A706646246D628B00482080 /* SceneDelegate.swift */,
 				5AE8AF0F246CCDF5006B1709 /* UpdateList.swift */,
 				5AE8AF11246CD864006B1709 /* UpdateDetail.swift */,
 				5AE8AF13246CE08B006B1709 /* UpdateStore.swift */,
@@ -122,6 +124,7 @@
 			children = (
 				5AE8AED7246B99EB006B1709 /* AppDelegate.swift */,
 				5AE8AEDB246B99EB006B1709 /* ContentView.swift */,
+				5A706648246D6A3800482080 /* RingView.swift */,
 				5AE8AF07246C7D9C006B1709 /* MenuView.swift */,
 				5AE8AEDD246B99F8006B1709 /* Assets.xcassets */,
 				5AE8AEE2246B99F8006B1709 /* LaunchScreen.storyboard */,
@@ -293,8 +296,9 @@
 				5AE8AED8246B99EB006B1709 /* AppDelegate.swift in Sources */,
 				5AE8AF08246C7D9C006B1709 /* MenuView.swift in Sources */,
 				5AE8AF10246CCDF5006B1709 /* UpdateList.swift in Sources */,
-				5AF361F9246CEF260018711E /* SceneDelegate.swift in Sources */,
+				5A706649246D6A3800482080 /* RingView.swift in Sources */,
 				5AE8AF14246CE08B006B1709 /* UpdateStore.swift in Sources */,
+				5A706647246D628B00482080 /* SceneDelegate.swift in Sources */,
 				5AE8AF0A246C906A006B1709 /* Home.swift in Sources */,
 				5AE8AF0E246CA290006B1709 /* HomeView.swift in Sources */,
 				5AE8AEDC246B99EB006B1709 /* ContentView.swift in Sources */,
