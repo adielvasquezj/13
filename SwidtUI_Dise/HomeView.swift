@@ -46,7 +46,7 @@ struct HomeView: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     WatchRingsView()
                         .padding(.horizontal, 30)
-                    .padding(.bottom, 30)
+                        .padding(.bottom, 30)
                         .onTapGesture {
                             self.showContent = true
                     }
@@ -70,11 +70,11 @@ struct HomeView: View {
                 HStack {
                     Text("Mas")
                         .font(.title)
-                    .bold()
+                        .bold()
                     Spacer()
                 }
                 .padding(.leading, 30)
-                 .offset(y: -35)
+                .offset(y: -35)
                 
                 SectionView(section: sectionData[2], width: screen.width - 60, height: 275)
                 
@@ -93,7 +93,7 @@ struct HomeView_Previews: PreviewProvider {
 struct SectionView: View {
     var section: Section
     var width: CGFloat = 275
-      var height: CGFloat = 275
+    var height: CGFloat = 275
     
     var body: some View {
         VStack {
@@ -138,9 +138,9 @@ let sectionData = [
     Section(title: "Swift is fun", text: "Sección 3", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Card4")), color: Color(#colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1))),
     Section(title: "Swift es un lenguage de programacion", text: "Sección 4", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Card1")), color: Color(#colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1))),
     Section(title: "Diseño en SwiftUI con Swift", text: "Sección 1", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Background1")), color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))),
-       Section(title: "Apple es una compañia estadounidense", text: "Sección 2", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Card1")), color: Color(#colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1))),
-       Section(title: "Swift is fun", text: "Sección 3", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Card4")), color: Color(#colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1))),
-       Section(title: "Swift es un lenguage de programacion", text: "Sección 4", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Card1")), color: Color(#colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)))
+    Section(title: "Apple es una compañia estadounidense", text: "Sección 2", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Card1")), color: Color(#colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1))),
+    Section(title: "Swift is fun", text: "Sección 3", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Card4")), color: Color(#colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1))),
+    Section(title: "Swift es un lenguage de programacion", text: "Sección 4", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Card1")), color: Color(#colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)))
 ]
 
 
