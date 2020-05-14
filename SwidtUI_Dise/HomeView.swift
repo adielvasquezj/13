@@ -24,15 +24,15 @@ struct HomeView: View {
             .padding(.horizontal)
             .padding(.leading, 14)
             .padding(.bottom, 30)
-
+            
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 30){
-                    ForEach(0 ..< 5) { item in
-                        SectionView()
+                    ForEach(sectionData) { item in
+                        SectionView(section: item)
                     }
                 }
-            .padding(30)
+                .padding(30)
             }
             
             Spacer()
@@ -47,20 +47,21 @@ struct HomeView_Previews: PreviewProvider {
 }
 
 struct SectionView: View {
+    var section: Section
     var body: some View {
         VStack {
             HStack(alignment: .top) {
-                Text("Prototipo diseño en SwiftUI")
+                Text(section.title)
                     .font(.system(size: 20, weight: .bold))
                     .frame(width: 160, alignment: .leading)
                     .foregroundColor(.white)
                 Spacer()
-                Image("Logo1")
+                Image(section.logo)
             }
-            Text("18 Secciones".uppercased())
+            Text(section.text.uppercased())
                 .frame(maxWidth: .infinity, alignment: .leading)
             
-            Image("Card1")
+            section.image
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 210)
@@ -68,8 +69,26 @@ struct SectionView: View {
         .padding(.top, 20)
         .padding(.horizontal, 20)
         .frame(width: 275, height: 275)
-        .background(Color("card1"))
+        .background(section.color)
         .cornerRadius(30)
-        .shadow(color: Color("card1").opacity(0.3), radius: 20, x: 0, y: 20)
+        .shadow(color: section.color.opacity(0.3), radius: 20, x: 0, y: 20)
     }
 }
+
+
+struct  Section: Identifiable {
+    var id = UUID()
+    var title: String
+    var text: String
+    var logo: String
+    var image: Image
+    var color: Color
+}
+
+let sectionData = [
+    Section(title: "Diseño en SwidtUI con Swift", text: "Sección 1", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Background1")), color: Color(#colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1))),
+    Section(title: "Apple es una compañia estadounidense", text: "Sección 2", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Card1")), color: Color(#colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1))),
+    Section(title: "Swift is fun", text: "Sección 3", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Card4")), color: Color(#colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1))),
+    Section(title: "Swift es un lenguage de programacion", text: "Sección 4", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Card1")), color: Color(#colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1))),
+]
+
