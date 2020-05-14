@@ -27,9 +27,9 @@ struct HomeView: View {
                         .font(.system(size: 16, weight: .medium))
                         .frame(width: 36, height: 36)
                         .background(Color.white)
-                    .clipShape(Circle())
+                        .clipShape(Circle())
                         .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
-                    .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 10)
+                        .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 10)
                     
                 }
                 .sheet(isPresented: $showUpdate) {
@@ -48,7 +48,7 @@ struct HomeView: View {
                             SectionView(section: item)
                                 .rotation3DEffect(Angle(degrees: Double(geometry.frame(in: .global).minX - 30) / -20
                                     ),
-                                    axis: (x: 0, y: 10, z: 0))
+                                                  axis: (x: 0, y: 10, z: 0))
                         }
                         .frame(width: 275, height: 275)
                     }
@@ -111,5 +111,9 @@ let sectionData = [
     Section(title: "Apple es una compañia estadounidense", text: "Sección 2", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Card1")), color: Color(#colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1))),
     Section(title: "Swift is fun", text: "Sección 3", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Card4")), color: Color(#colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1))),
     Section(title: "Swift es un lenguage de programacion", text: "Sección 4", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Card1")), color: Color(#colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1))),
+    Section(title: "Diseño en SwiftUI con Swift", text: "Sección 1", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Background1")), color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1))),
+       Section(title: "Apple es una compañia estadounidense", text: "Sección 2", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Card1")), color: Color(#colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1))),
+       Section(title: "Swift is fun", text: "Sección 3", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Card4")), color: Color(#colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1))),
+       Section(title: "Swift es un lenguage de programacion", text: "Sección 4", logo: "Logo1", image: Image(uiImage: #imageLiteral(resourceName: "Card1")), color: Color(#colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)))
 ]
 

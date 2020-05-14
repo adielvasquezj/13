@@ -20,6 +20,8 @@
 		5AE8AF10246CCDF5006B1709 /* UpdateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8AF0F246CCDF5006B1709 /* UpdateList.swift */; };
 		5AE8AF12246CD864006B1709 /* UpdateDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8AF11246CD864006B1709 /* UpdateDetail.swift */; };
 		5AE8AF14246CE08B006B1709 /* UpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8AF13246CE08B006B1709 /* UpdateStore.swift */; };
+		5AE8AF16246CE886006B1709 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8AF15246CE886006B1709 /* TabBar.swift */; };
+		5AF361F9246CEF260018711E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF361F8246CEF260018711E /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		5AE8AF0F246CCDF5006B1709 /* UpdateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateList.swift; sourceTree = "<group>"; };
 		5AE8AF11246CD864006B1709 /* UpdateDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDetail.swift; sourceTree = "<group>"; };
 		5AE8AF13246CE08B006B1709 /* UpdateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStore.swift; sourceTree = "<group>"; };
+		5AE8AF15246CE886006B1709 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		5AF361F8246CEF260018711E /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../../SwidtUI_Dise/SwidtUI_Dise/SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,9 +95,11 @@
 			children = (
 				5AE8AF09246C906A006B1709 /* Home.swift */,
 				5AE8AF0D246CA290006B1709 /* HomeView.swift */,
+				5AF361F8246CEF260018711E /* SceneDelegate.swift */,
 				5AE8AF0F246CCDF5006B1709 /* UpdateList.swift */,
 				5AE8AF11246CD864006B1709 /* UpdateDetail.swift */,
 				5AE8AF13246CE08B006B1709 /* UpdateStore.swift */,
+				5AE8AF15246CE886006B1709 /* TabBar.swift */,
 				5AE8AED6246B99EA006B1709 /* SwidtUI_Dise */,
 				5AE8AEED246B99F8006B1709 /* SwidtUI_DiseTests */,
 				5AE8AEF8246B99F8006B1709 /* SwidtUI_DiseUITests */,
@@ -282,10 +288,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AE8AF16246CE886006B1709 /* TabBar.swift in Sources */,
 				5AE8AF12246CD864006B1709 /* UpdateDetail.swift in Sources */,
 				5AE8AED8246B99EB006B1709 /* AppDelegate.swift in Sources */,
 				5AE8AF08246C7D9C006B1709 /* MenuView.swift in Sources */,
 				5AE8AF10246CCDF5006B1709 /* UpdateList.swift in Sources */,
+				5AF361F9246CEF260018711E /* SceneDelegate.swift in Sources */,
 				5AE8AF14246CE08B006B1709 /* UpdateStore.swift in Sources */,
 				5AE8AF0A246C906A006B1709 /* Home.swift in Sources */,
 				5AE8AF0E246CA290006B1709 /* HomeView.swift in Sources */,
@@ -459,6 +467,7 @@
 				DEVELOPMENT_TEAM = LR77JW47YC;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwidtUI_Dise/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -479,6 +488,7 @@
 				DEVELOPMENT_TEAM = LR77JW47YC;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwidtUI_Dise/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

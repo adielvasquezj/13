@@ -84,6 +84,6 @@ let updateData = [
     Update(image: "Card1", title: "Acta de nacimiento", text: "Expedición de la copia certificada del acta de nacimiento en línea", date: "Enero 1"),
     Update(image: "Card2", title: "Swift is fun", text: "Datos de filiación (nombre completo de madre, padre o persona que te registroPara pago en línea, tarjeta de crédito o débito", date: "Enero 4"),
     Update(image: "Card3", title: "Prueba", text: "Expedición de la copia certificada del acta de nacimiento en línea", date: "Enero 6"),
-    Update(image: "Card4", title: "Documentos necesarios ", text: "Para tramitar tu copia certificada del acta de nacimiento en línea no es necesario ningún documento, sin embargo, debes contar con los siguientes datos:", date: "Enero 8"),
+    Update(image: "Card4", title: "Documentos ", text: "Para tramitar tu copia certificada del acta de nacimiento en línea no es necesario ningún documento, sin embargo, debes contar con los siguientes datos:", date: "Enero 8"),
     Update(image: "Card5", title: "SwiftUI 4", text: "Texto", date: "Enero 9")
 ]
