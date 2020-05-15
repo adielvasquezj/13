@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A1C1DC4246EF4E60067ADF0 /* CourseDetaol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1C1DC3246EF4E60067ADF0 /* CourseDetaol.swift */; };
 		5A706647246D628B00482080 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A706646246D628B00482080 /* SceneDelegate.swift */; };
 		5A706649246D6A3800482080 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A706648246D6A3800482080 /* RingView.swift */; };
 		5A70664B246D9C3800482080 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A70664A246D9C3800482080 /* Modifiers.swift */; };
@@ -59,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A1C1DC3246EF4E60067ADF0 /* CourseDetaol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetaol.swift; sourceTree = "<group>"; };
 		5A706646246D628B00482080 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5A706648246D6A3800482080 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		5A70664A246D9C3800482080 /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			children = (
 				5AE8AF09246C906A006B1709 /* Home.swift */,
 				5A70665D246DD39E00482080 /* CourseList.swift */,
+				5A1C1DC3246EF4E60067ADF0 /* CourseDetaol.swift */,
 				5AE8AF0D246CA290006B1709 /* HomeView.swift */,
 				5A706646246D628B00482080 /* SceneDelegate.swift */,
 				5AE8AF0F246CCDF5006B1709 /* UpdateList.swift */,
@@ -346,6 +349,7 @@
 				5A70664B246D9C3800482080 /* Modifiers.swift in Sources */,
 				5AE8AF10246CCDF5006B1709 /* UpdateList.swift in Sources */,
 				5A706649246D6A3800482080 /* RingView.swift in Sources */,
+				5A1C1DC4246EF4E60067ADF0 /* CourseDetaol.swift in Sources */,
 				5AE8AF14246CE08B006B1709 /* UpdateStore.swift in Sources */,
 				5A706647246D628B00482080 /* SceneDelegate.swift in Sources */,
 				5AE8AF0A246C906A006B1709 /* Home.swift in Sources */,

@@ -98,53 +98,54 @@ struct CourseView: View {
             .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
             .opacity(show ? 1 : 0)
             
-            VStack {
-                HStack(alignment: .top) {
-                    VStack(alignment: .leading, spacing: 8.0) {
-                        Text(course.title)
-                            .font(.system(size: 24, weight: .bold))
-                            .foregroundColor(Color.white)
-                        Text(course.subTitle)
-                            .foregroundColor(Color.white.opacity(0.7))
-                    }
-                    Spacer()
-                    ZStack {
-                        Image(uiImage: course.logo)
-                            .opacity(show ? 0 : 1)
-                        
-                        VStack {
-                            Image(systemName: "xmark")
-                                .font(.system(size: 16, weight: .medium))
-                                .foregroundColor(.white)
-                        }
-                        .frame(width: 36, height: 36)
-                        .background(Color.black)
-                        .clipShape(Circle())
-                        .opacity(show ? 1 : 0)
-                    }
-                }
-                Spacer()
-                Image(uiImage: course.image)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 140, alignment: .top)
-                
-            }
-            .padding(show ? 30 : 20)
-            .padding(.top, show ? 30 : 0)
-                //.frame(width:show ?  screen.width : screen.width - 60, height: show ? screen.height : 280)
-                .frame(maxWidth: show ? .infinity : screen.width - 60, maxHeight: show ? 460 : 280)
-                .background(Color(course.color))
-                .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
-                .shadow(color: Color(course.color).opacity(0.3), radius: 20, x: 0, y: 20)
-                
+           VStack {
+                          HStack(alignment: .top) {
+                              VStack(alignment: .leading, spacing: 8.0) {
+                                  Text(course.title)
+                                      .font(.system(size: 24, weight: .bold))
+                                      .foregroundColor(Color.white)
+                                  Text(course.subTitle)
+                                      .foregroundColor(Color.white.opacity(0.7))
+                              }
+                              Spacer()
+                              ZStack {
+                                  Image(uiImage: course.logo)
+                                      .opacity(show ? 0 : 1)
+                                  
+                                  VStack {
+                                      Image(systemName: "xmark")
+                                          .font(.system(size: 16, weight: .medium))
+                                          .foregroundColor(.white)
+                                  }
+                                  .frame(width: 36, height: 36)
+                                  .background(Color.black)
+                                  .clipShape(Circle())
+                                  .opacity(show ? 1 : 0)
+                              }
+                          }
+                          Spacer()
+                          Image(uiImage: course.image)
+                              .resizable()
+                              .aspectRatio(contentMode: .fit)
+                              .frame(maxWidth: .infinity)
+                              .frame(height: 140, alignment: .top)
+                          
+                      }
+                      .padding(show ? 30 : 20)
+                      .padding(.top, show ? 30 : 0)
+                          //.frame(width:show ?  screen.width : screen.width - 60, height: show ? screen.height : 280)
+                          .frame(maxWidth: show ? .infinity : screen.width - 60, maxHeight: show ? 460 : 280)
+                          .background(Color(course.color))
+                          .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
+                          .shadow(color: Color(course.color).opacity(0.3), radius: 20, x: 0, y: 20)
+                          
                 .gesture(
                     show ?
                         DragGesture().onChanged { value in
                             guard value.translation.height < 300 else { return }
                             guard value.translation.height > 0 else { return }
-                            self.activeView = value.translation
+                           
+                            //self.activeView = value.translation
                             
                         }
                         .onEnded { value in
@@ -158,16 +159,21 @@ struct CourseView: View {
                             
                         }
                         : nil
-            )
-                
-                .onTapGesture {
-                    self.show.toggle()
-                    self.active.toggle()
-                    if self.show {
-                        self.activeIndex = self.index
-                    } else {
-                        self.activeIndex = -1
-                    }
+           )
+            
+            .onTapGesture {
+                self.show.toggle()
+                self.active.toggle()
+                if self.show {
+                    self.activeIndex = self.index
+                } else {
+                    self.activeIndex = -1
+                }
+            }
+            if show {
+           //    CourseDetail(course: course, show: $show, active: $active, activeIndex: $activeIndex)
+            //        .background(Color.white)
+                   // .animation(nil)
             }
             
         }
@@ -181,6 +187,7 @@ struct CourseView: View {
                 DragGesture().onChanged { value in
                     guard value.translation.height < 300 else { return }
                     guard value.translation.height > 0 else { return }
+                   
                     self.activeView = value.translation
                     
                 }
