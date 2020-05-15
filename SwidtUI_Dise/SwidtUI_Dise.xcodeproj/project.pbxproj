@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5A1C1DC4246EF4E60067ADF0 /* CourseDetaol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1C1DC3246EF4E60067ADF0 /* CourseDetaol.swift */; };
+		5A1C1DC6246EFC120067ADF0 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1C1DC5246EFC120067ADF0 /* Data.swift */; };
+		5A1C1DC8246EFFB60067ADF0 /* PostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1C1DC7246EFFB60067ADF0 /* PostList.swift */; };
 		5A706647246D628B00482080 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A706646246D628B00482080 /* SceneDelegate.swift */; };
 		5A706649246D6A3800482080 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A706648246D6A3800482080 /* RingView.swift */; };
 		5A70664B246D9C3800482080 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A70664A246D9C3800482080 /* Modifiers.swift */; };
@@ -61,6 +63,8 @@
 
 /* Begin PBXFileReference section */
 		5A1C1DC3246EF4E60067ADF0 /* CourseDetaol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetaol.swift; sourceTree = "<group>"; };
+		5A1C1DC5246EFC120067ADF0 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		5A1C1DC7246EFFB60067ADF0 /* PostList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostList.swift; sourceTree = "<group>"; };
 		5A706646246D628B00482080 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5A706648246D6A3800482080 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
 		5A70664A246D9C3800482080 /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
@@ -164,6 +168,8 @@
 				5A706648246D6A3800482080 /* RingView.swift */,
 				5A70664A246D9C3800482080 /* Modifiers.swift */,
 				5AE8AF07246C7D9C006B1709 /* MenuView.swift */,
+				5A1C1DC5246EFC120067ADF0 /* Data.swift */,
+				5A1C1DC7246EFFB60067ADF0 /* PostList.swift */,
 				5AE8AEDD246B99F8006B1709 /* Assets.xcassets */,
 				5A70664C246DA82600482080 /* Libre_Caslon_Text */,
 				5AE8AEE2246B99F8006B1709 /* LaunchScreen.storyboard */,
@@ -343,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AE8AF16246CE886006B1709 /* TabBar.swift in Sources */,
+				5A1C1DC6246EFC120067ADF0 /* Data.swift in Sources */,
 				5AE8AF12246CD864006B1709 /* UpdateDetail.swift in Sources */,
 				5AE8AED8246B99EB006B1709 /* AppDelegate.swift in Sources */,
 				5AE8AF08246C7D9C006B1709 /* MenuView.swift in Sources */,
@@ -352,6 +359,7 @@
 				5A1C1DC4246EF4E60067ADF0 /* CourseDetaol.swift in Sources */,
 				5AE8AF14246CE08B006B1709 /* UpdateStore.swift in Sources */,
 				5A706647246D628B00482080 /* SceneDelegate.swift in Sources */,
+				5A1C1DC8246EFFB60067ADF0 /* PostList.swift in Sources */,
 				5AE8AF0A246C906A006B1709 /* Home.swift in Sources */,
 				5AE8AF0E246CA290006B1709 /* HomeView.swift in Sources */,
 				5AE8AEDC246B99EB006B1709 /* ContentView.swift in Sources */,
