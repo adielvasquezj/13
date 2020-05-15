@@ -10,37 +10,48 @@ import SwiftUI
 
 struct CourseList: View {
     @State var courses = courseData
+    @State var active = false
     
     var body: some View {
-        ScrollView {
-            VStack(spacing: 30.0) {
-                Text("Cursos")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.leading, 30)
-                    .padding(.top, 30)
-                // CourseView(show: $show)
-                //GeometryReader es para detectar tipo de pantalla
-                ForEach(courses.indices, id: \.self) { index in
-                    GeometryReader { geometry in
-                        
-                        
-                        CourseView(show: self.$courses[index].show, course: self.courses[index])
-                            
-                            .offset(y: self.courses[index].show ? -geometry.frame(in: .global).minY : 0)
-                        
-                    }
-                    .frame(height: 280)
-                    .frame(maxWidth: self.courses[index].show ? .infinity : screen.width - 60)
-                }
+        ZStack {
+            Color.black.opacity(active ? 0.4 : 0)
+                .animation(.linear)
+                .edgesIgnoringSafeArea(.all)
                 
+            ScrollView {
+                VStack(spacing: 30.0) {
+                    Text("Cursos")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.leading, 30)
+                        .padding(.top, 30)
+                        .blur(radius: active ? 20 : 0)
+                    // CourseView(show: $show)
+                    //GeometryReader es para detectar tipo de pantalla
+                    ForEach(courses.indices, id: \.self) { index in
+                        GeometryReader { geometry in
+                            
+                            
+                            CourseView(show: self.$courses[index].show, active: self.$active, course: self.courses[index])
+                                
+                                .offset(y: self.courses[index].show ? -geometry.frame(in: .global).minY : 0)
+                            
+                        }
+                        .frame(height: 280)
+                        .frame(maxWidth: self.courses[index].show ? .infinity : screen.width - 60)
+                          //.zIndex Es para encimar algo
+                        .zIndex(self.courses[index].show ? 1: 0)
+                    }
+                    
+                }
+                .frame(width: screen.width)
+                .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
             }
-            .frame(width: screen.width)
-            .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
+            
+            .statusBar(hidden: active ? true : false)
+            .animation(.easeInOut)
         }
-        
-        
     }
 }
 
@@ -52,6 +63,7 @@ struct CourseList_Previews: PreviewProvider {
 
 struct CourseView: View {
     @Binding var show: Bool
+     @Binding var active: Bool
     var course: Course
     var body: some View {
         ZStack(alignment: .top) {
@@ -120,6 +132,7 @@ struct CourseView: View {
                 
                 .onTapGesture {
                     self.show.toggle()
+                    self.active.toggle()
             }
             
         }
