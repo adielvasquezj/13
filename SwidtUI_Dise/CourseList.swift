@@ -12,10 +12,11 @@ struct CourseList: View {
     @State var courses = courseData
     @State var active = false
     @State var activeIndex = -1
+    @State var activeView = CGSize.zero
     
     var body: some View {
         ZStack {
-            Color.black.opacity(active ? 0.4 : 0)
+            Color.black.opacity(Double(self.activeView.height/500))
                 .animation(.linear)
                 .edgesIgnoringSafeArea(.all)
             
@@ -36,7 +37,7 @@ struct CourseList: View {
                             
                             CourseView(show: self.$courses[index].show,
                                        active: self.$active, index: index, activeIndex: self.$activeIndex,
-                                       course: self.courses[index])
+                                       course: self.courses[index], activeView: self.$activeView)
                                 .offset(y: self.courses[index].show ? -geometry.frame(in: .global).minY : 0)
                                 .opacity(self.activeIndex != index && self.active ? 0 : 1)
                                 .scaleEffect(self.activeIndex != index && self.active ? 0.5 : 1)
@@ -72,7 +73,7 @@ struct CourseView: View {
     var index: Int
     @Binding var activeIndex: Int
     var course: Course
-    @State var activeView = CGSize.zero
+    @Binding var activeView : CGSize
     var body: some View {
         ZStack(alignment: .top) {
             VStack(alignment: .leading, spacing: 30.0) {
@@ -141,9 +142,10 @@ struct CourseView: View {
                 .gesture(
                     show ?
                         DragGesture().onChanged { value in
-                            if value.translation.height < 300 {
-                                self.activeView = value.translation
-                            }
+                            guard value.translation.height < 300 else { return }
+                            guard value.translation.height > 0 else { return }
+                            self.activeView = value.translation
+                            
                         }
                         .onEnded { value in
                             if self.activeView.height > 50 {
@@ -152,10 +154,10 @@ struct CourseView: View {
                                 self.activeIndex = -1
                                 
                             }
-            self.activeView = .zero
-            
-        }
-        : nil
+                            self.activeView = .zero
+                            
+                        }
+                        : nil
             )
                 
                 .onTapGesture {
@@ -174,7 +176,28 @@ struct CourseView: View {
         .rotation3DEffect(Angle(degrees: Double(self.activeView.height / 10)), axis: (x: 0, y: 10, z: 0))
         .hueRotation(Angle(degrees: Double(self.activeView.height)))
         .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0))
-        .edgesIgnoringSafeArea(.all)
+        .gesture(
+            show ?
+                DragGesture().onChanged { value in
+                    guard value.translation.height < 300 else { return }
+                    guard value.translation.height > 0 else { return }
+                    self.activeView = value.translation
+                    
+                }
+                .onEnded { value in
+                    if self.activeView.height > 50 {
+                        self.show = false
+                        self.active = false
+                        self.activeIndex = -1
+                        
+                    }
+                    self.activeView = .zero
+                    
+                }
+                : nil
+        )
+            
+            .edgesIgnoringSafeArea(.all)
     }
 }
 
