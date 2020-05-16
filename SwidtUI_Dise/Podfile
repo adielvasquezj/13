@@ -1,0 +1,26 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'SwidtUI_Dise' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for SwidtUI_Dise
+
+  target 'SwidtUI_DiseTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'SwidtUI_DiseUITests' do
+    # Pods for testing
+
+
+
+  end
+platform :ios, '9.0'
+use_frameworks!
+pod 'Contentful'
+
+
+end

@@ -1,0 +1,6 @@
+framework module Pods_SwidtUI_Dise_SwidtUI_DiseUITests {
+  umbrella header "Pods-SwidtUI_Dise-SwidtUI_DiseUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
