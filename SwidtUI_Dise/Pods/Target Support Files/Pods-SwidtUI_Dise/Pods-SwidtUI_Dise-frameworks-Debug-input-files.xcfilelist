@@ -1,2 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-SwidtUI_Dise/Pods-SwidtUI_Dise-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Contentful/Contentful.framework
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
+${BUILT_PRODUCTS_DIR}/SDWebImageSwiftUI/SDWebImageSwiftUI.framework

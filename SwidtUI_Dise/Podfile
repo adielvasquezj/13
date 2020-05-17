@@ -14,13 +14,9 @@ target 'SwidtUI_Dise' do
 
   target 'SwidtUI_DiseUITests' do
     # Pods for testing
-
-
-
   end
-platform :ios, '9.0'
-use_frameworks!
-pod 'Contentful'
 
+pod 'Contentful', '~> 5.0.0'
+pod 'SDWebImageSwiftUI'
 
 end

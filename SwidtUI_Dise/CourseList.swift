@@ -2,10 +2,11 @@
 //  CourseList.swift
 //  SwidtUI_Dise
 //
-//  Created by roott on 5/14/20.
+//  Created Adiel Jimenez on 5/14/20.
 //  Copyright © 2020 roott. All rights reserved.
 //
 
+import SDWebImageSwiftUI
 import SwiftUI
 import Contentful
 
@@ -128,7 +129,7 @@ struct CourseView: View {
                               }
                           }
                           Spacer()
-                          Image(uiImage: course.image)
+            WebImage(url: course.image)
                               .resizable()
                               .aspectRatio(contentMode: .fit)
                               .frame(maxWidth: .infinity)
@@ -216,7 +217,7 @@ struct Course: Identifiable {
     var id = UUID()
     var title : String
     var subTitle: String
-    var image: UIImage
+    var image: URL
     var logo: UIImage
     var color: UIColor
     var show: Bool
@@ -226,8 +227,10 @@ struct Course: Identifiable {
 
 var courseData = [
     
-    Course(title: "Diseño en SwiftUI", subTitle: "Sección 19", image: #imageLiteral(resourceName: "Card5"), logo: #imageLiteral(resourceName: "Logo1"), color: #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1), show: false),
-    Course(title: "Diseño en SwiftUI 1", subTitle: "Sección 20", image: #imageLiteral(resourceName: "Background1"), logo: #imageLiteral(resourceName: "Logo1"), color: #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), show: false),
-    Course(title: "Diseño en SwiftUI 2", subTitle: "Sección 21", image: #imageLiteral(resourceName: "Card5"), logo: #imageLiteral(resourceName: "Logo1"), color: #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1), show: false),
+    Course(title: "Diseño en SwiftUI", subTitle: "Sección 19", image: URL(string: "https://dl.dropbox.com/s/zc12olnzj4lvo6h/Card4%402x.png?dl=0")!,
+           logo: #imageLiteral(resourceName: "Logo1"), color: #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1), show: false),
+    Course(title: "Diseño en SwiftUI", subTitle: "Sección 19", image: URL(string: "https://dl.dropbox.com/s/pnva9rwjs6nx9ik/Card2%402x.png?dl=0")!, logo: #imageLiteral(resourceName: "Logo1"), color: #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1), show: false),
+    Course(title: "Diseño en SwiftUI", subTitle: "Sección 19", image: URL(string: "https://dl.dropbox.com/s/pnva9rwjs6nx9ik/Card2%402x.png?dl=0")!, logo: #imageLiteral(resourceName: "Logo1"), color: #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1), show: false),
+    
     
 ]

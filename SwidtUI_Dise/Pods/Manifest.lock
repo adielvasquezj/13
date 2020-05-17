@@ -2,17 +2,27 @@ PODS:
   - Contentful (5.0.11):
     - Contentful/ImageOptions (= 5.0.11)
   - Contentful/ImageOptions (5.0.11)
+  - SDWebImage (5.8.0):
+    - SDWebImage/Core (= 5.8.0)
+  - SDWebImage/Core (5.8.0)
+  - SDWebImageSwiftUI (1.4.0):
+    - SDWebImage (~> 5.7)
 
 DEPENDENCIES:
-  - Contentful
+  - Contentful (~> 5.0.0)
+  - SDWebImageSwiftUI
 
 SPEC REPOS:
   trunk:
     - Contentful
+    - SDWebImage
+    - SDWebImageSwiftUI
 
 SPEC CHECKSUMS:
   Contentful: 6608ce5f58c9278a871a7fd3e6e85c2fcb1d2dca
+  SDWebImage: 84000f962cbfa70c07f19d2234cbfcf5d779b5dc
+  SDWebImageSwiftUI: 034806fc7e19e0a36157fb8ecb9fc0437cc75230
 
-PODFILE CHECKSUM: e4ef0263e67644814817501bd442d6fe028b5500
+PODFILE CHECKSUM: 8e4fc6385947b6cdea20929490b3d91b4c86cc99
 
 COCOAPODS: 1.9.1
