@@ -215,7 +215,7 @@ struct BottomCardView: View {
             
 
             HStack(spacing: 20.0) {
-                RingView(color1: #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1), color2: #colorLiteral(red: 0.06274510175, green: 0, blue: 0.1921568662, alpha: 1), width: 88, height: 88, percent: 78, show: $show)
+                RingView(color1: #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1), color2: #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1), width: 88, height: 88, percent: 78, show: $show)
                     .animation(Animation.easeOut.delay(0.3))
                 
                 VStack(alignment: .leading, spacing: 8.0) {
@@ -228,7 +228,7 @@ struct BottomCardView: View {
                     
                 }
             .padding(20)
-                .background(Color.white)
+                .background(Color("background3"))
             .cornerRadius(20)
                 .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 10)
             }

@@ -2,7 +2,7 @@
 //  MenuView.swift
 //  SwidtUI_Dise
 //
-//  Created by roott on 5/13/20.
+//  Created by Adiel Jimenez on 5/13/20.
 //  Copyright © 2020 roott. All rights reserved.
 //
 
@@ -14,7 +14,7 @@ struct MenuView: View {
         VStack {
             Spacer()
             VStack(spacing: 16) {
-
+                
                 Text("Adiel Jimenez")
                     .font(.caption)
                 
@@ -26,19 +26,19 @@ struct MenuView: View {
                     .cornerRadius(3)
                     .padding()
                     .frame(width: 150, height: 24)
-                    .background(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)).opacity(0.1))
+                    .background(Color.black.opacity(0.1))
                     .cornerRadius(12)
                 
                 
                 MenuRow(title: "Cuenta", icon: "gear")
                 MenuRow(title: "Suscripción", icon: "creditcard")
                 MenuRow(title: "Salir", icon: "person.crop.circle")
-          
+                
                 
             }
             .frame(maxWidth: .infinity)
             .frame(height: 300)
-            .background( LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), Color(#colorLiteral(red: 0.8116200566, green: 0.8882222772, blue: 0.9165163636, alpha: 1))]),  startPoint: /*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/, endPoint: /*@START_MENU_TOKEN@*/.trailing/*@END_MENU_TOKEN@*/))
+            .background(BlurView(style: .systemThickMaterial))
             .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
             .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
             .padding(.horizontal, 30)

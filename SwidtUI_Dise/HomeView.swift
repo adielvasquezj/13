@@ -18,7 +18,7 @@ struct HomeView: View {
             VStack {
                 HStack(spacing: 12) {
                     Text("Vista")
-                        // .font(.system(size: 28, weight: .bold))
+                       .font(.system(size: 28, weight: .bold))
                         .modifier(CustomFontModifier(size: 28))
                     
                     Spacer()
@@ -26,10 +26,11 @@ struct HomeView: View {
                     AvatarView(showProfile: $showProfile)
                     Button(action: { self.showUpdate.toggle() }) {
                         Image(systemName: "bell")
-                            .renderingMode(.original)
+                          //  .renderingMode(.original)
+                            .foregroundColor(.primary)
                             .font(.system(size: 16, weight: .medium))
                             .frame(width: 36, height: 36)
-                            .background(Color.white)
+                            .background(Color("background3"))
                             .clipShape(Circle())
                             .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
                             .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 10)
@@ -80,6 +81,7 @@ struct HomeView: View {
                 
                 Spacer()
             }
+            .frame(width: screen.width)
         }
     }
 }
@@ -145,6 +147,7 @@ let sectionData = [
 
 
 struct WatchRingsView: View {
+   
     var body: some View {
         HStack(spacing: 30) {
             HStack(spacing: 12.0) {
@@ -156,26 +159,26 @@ struct WatchRingsView: View {
                 .modifier(FontModifier())
             }
             .padding(8)
-            .background(Color.white)
+            .background(Color("background3"))
             .cornerRadius(20)
             .modifier(ShadowModifier())
             
             HStack(spacing: 12.0) {
-                RingView(color1: #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1), color2: #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1), width: 33, height: 33, percent: 54, show: .constant(true))
+                RingView(color1: #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1), color2: #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1), width: 33, height: 33, percent: 54, show: .constant(true))
                     
                     .modifier(FontModifier())
             }
             .padding(8)
-            .background(Color.white)
+           .background(Color("background3"))
             .cornerRadius(20)
             .modifier(ShadowModifier())
             HStack(spacing: 12.0) {
-                RingView(color1: #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1), color2: #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1), width: 33, height: 33, percent: 54, show: .constant(true))
+                RingView(color1: #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1), color2: #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1), width: 33, height: 33, percent: 54, show: .constant(true))
                     
                     .modifier(FontModifier())
             }
             .padding(8)
-            .background(Color.white)
+           .background(Color("background3"))
             .cornerRadius(20)
             .modifier(ShadowModifier())
             
