@@ -238,7 +238,7 @@ struct BottomCardView: View {
         .padding(.top, 8)
         .padding(.horizontal, 20)
         .frame(maxWidth: .infinity)
-        .background(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
+        .background(BlurView(style: .systemThickMaterial))
         .cornerRadius(30)
         .shadow(radius: 20)
     }
