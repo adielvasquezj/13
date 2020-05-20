@@ -9,9 +9,7 @@
 import SwiftUI
 
 struct Home: View {
-    
     @State var showProfile = false
-    
     @State var showContent = false
     @State var viewState = CGSize.zero
     

@@ -31,8 +31,6 @@
 		5A70665B246DA82600482080 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5A706650246DA82600482080 /* OFL.txt */; };
 		5A70665C246DA82600482080 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5A706650246DA82600482080 /* OFL.txt */; };
 		5A70665E246DD39E00482080 /* CourseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A70665D246DD39E00482080 /* CourseList.swift */; };
-		5A70665F246DD39E00482080 /* CourseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A70665D246DD39E00482080 /* CourseList.swift */; };
-		5A706660246DD39E00482080 /* CourseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A70665D246DD39E00482080 /* CourseList.swift */; };
 		5AE8AED8246B99EB006B1709 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8AED7246B99EB006B1709 /* AppDelegate.swift */; };
 		5AE8AEDC246B99EB006B1709 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8AEDB246B99EB006B1709 /* ContentView.swift */; };
 		5AE8AEDE246B99F8006B1709 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AE8AEDD246B99F8006B1709 /* Assets.xcassets */; };
@@ -168,17 +166,6 @@
 		5AE8AECB246B99EA006B1709 = {
 			isa = PBXGroup;
 			children = (
-				5AE8AF09246C906A006B1709 /* Home.swift */,
-				5A70665D246DD39E00482080 /* CourseList.swift */,
-				5A58E379247029DC00BA0280 /* CourseStore.swift */,
-				5A1C1DC3246EF4E60067ADF0 /* CourseDetaol.swift */,
-				5AE8AF0D246CA290006B1709 /* HomeView.swift */,
-				5A706646246D628B00482080 /* SceneDelegate.swift */,
-				5AE8AF0F246CCDF5006B1709 /* UpdateList.swift */,
-				5AE8AF11246CD864006B1709 /* UpdateDetail.swift */,
-				5AE8AF13246CE08B006B1709 /* UpdateStore.swift */,
-				5AE8AF15246CE886006B1709 /* TabBar.swift */,
-				5A58E37B2470D54D00BA0280 /* BlurView.swift */,
 				5AE8AED6246B99EA006B1709 /* SwidtUI_Dise */,
 				5AE8AEED246B99F8006B1709 /* SwidtUI_DiseTests */,
 				5AE8AEF8246B99F8006B1709 /* SwidtUI_DiseUITests */,
@@ -202,13 +189,24 @@
 			isa = PBXGroup;
 			children = (
 				5AE8AED7246B99EB006B1709 /* AppDelegate.swift */,
+				5A706646246D628B00482080 /* SceneDelegate.swift */,
 				5AE8AEDB246B99EB006B1709 /* ContentView.swift */,
 				5A706648246D6A3800482080 /* RingView.swift */,
 				5A70664A246D9C3800482080 /* Modifiers.swift */,
+				5AE8AF09246C906A006B1709 /* Home.swift */,
+				5AE8AF0D246CA290006B1709 /* HomeView.swift */,
+				5A70665D246DD39E00482080 /* CourseList.swift */,
 				5AE8AF07246C7D9C006B1709 /* MenuView.swift */,
+				5AE8AF0F246CCDF5006B1709 /* UpdateList.swift */,
+				5AE8AF11246CD864006B1709 /* UpdateDetail.swift */,
+				5AE8AF13246CE08B006B1709 /* UpdateStore.swift */,
 				5A1C1DC5246EFC120067ADF0 /* Data.swift */,
 				5A1C1DC9246F029E0067ADF0 /* DataStore.swift */,
+				5A58E379247029DC00BA0280 /* CourseStore.swift */,
+				5A1C1DC3246EF4E60067ADF0 /* CourseDetaol.swift */,
 				5A1C1DC7246EFFB60067ADF0 /* PostList.swift */,
+				5AE8AF15246CE886006B1709 /* TabBar.swift */,
+				5A58E37B2470D54D00BA0280 /* BlurView.swift */,
 				5AE8AEDD246B99F8006B1709 /* Assets.xcassets */,
 				5A70664C246DA82600482080 /* Libre_Caslon_Text */,
 				5AE8AEE2246B99F8006B1709 /* LaunchScreen.storyboard */,
@@ -531,7 +529,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A70665F246DD39E00482080 /* CourseList.swift in Sources */,
 				5AE8AEEF246B99F8006B1709 /* SwidtUI_DiseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -540,7 +537,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A706660246DD39E00482080 /* CourseList.swift in Sources */,
 				5AE8AEFA246B99F8006B1709 /* SwidtUI_DiseUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

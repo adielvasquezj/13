@@ -15,12 +15,10 @@ struct ContentView: View {
     @State var viewState = CGSize.zero
     @State var showCard = false
     @State var bottomState = CGSize.zero
-     @State var showFull = false
+    @State var showFull = false
     
     var body: some View {
-        
         ZStack {
-            
             TitleView()
                 .blur(radius: show ? 20 : 0)
                 .opacity(showCard ? 0.4 : 1)
@@ -59,8 +57,8 @@ struct ContentView: View {
                 .rotationEffect(Angle(degrees: showCard ? -5 : 0))
                 .rotation3DEffect(Angle(degrees:showCard ? 0 : 5), axis: (x: 10, y: 0, z: 0))
                 .blendMode(.hardLight)
-                .animation(.easeIn(duration: 0.3))
-            //
+                .animation(.easeIn(duration: 0.5))
+            
             
             CardView()
                 .frame(width:showCard ? 375 : 340, height: 220)
@@ -75,20 +73,19 @@ struct ContentView: View {
                 .onTapGesture {
                     self.showCard.toggle()
             }
-                //Mover la cardView
-                .gesture(DragGesture().onChanged { value in
-                    self.viewState = value.translation
-                    self.show = true
-                }
-                    //Regresar al mismo lugar
-                    .onEnded( { value in
-                        self.viewState = .zero
-                        self.show = false
-                    })
-                    
+            .gesture(DragGesture().onChanged { value in
+                self.viewState = value.translation
+                self.show = true
+            }
+                //Regresar al mismo lugar
+                .onEnded( { value in
+                    self.viewState = .zero
+                    self.show = false
+                })
+                
             )
             
-           // Text("\(bottomState.height)") .offset(y: -300)
+            // Text("\(bottomState.height)") .offset(y: -300)
             
             BottomCardView(show: $showCard)
                 .offset(x: 0, y: showCard ? 360 : 1000)
@@ -116,9 +113,9 @@ struct ContentView: View {
                         } else {
                             self.bottomState = .zero
                             self.showFull = false
-                        }
-                        
                     }
+                        
+                }
             )
             
         }
@@ -145,14 +142,12 @@ struct CardView: View {
                     Text("Certificado")
                         .foregroundColor(Color("accent"))
                 }
-                
                 Spacer()
                 
                 Image("Logo1")
             }
             .padding(.horizontal, 20)
             .padding(.top, 20)
-            
             Spacer()
             
             
@@ -160,10 +155,7 @@ struct CardView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 310, height: 110, alignment: .top)
-            
-            
         }
-        
     }
 }
 
@@ -172,9 +164,6 @@ struct BackCardView: View {
         VStack {
             Spacer()
         }
-        
-        
-        
     }
 }
 
@@ -186,13 +175,11 @@ struct TitleView: View {
                 Text("Certificados")
                     .font(.largeTitle)
                     .fontWeight(.bold)
-                
                 Spacer()
             }
-            .padding()
+               .padding()
             
             Image("Background1")
-            
             Spacer()
         }
     }
@@ -213,7 +200,7 @@ struct BottomCardView: View {
                 .font(.subheadline)
                 .lineSpacing(4)
             
-
+            
             HStack(spacing: 20.0) {
                 RingView(color1: #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1), color2: #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1), width: 88, height: 88, percent: 78, show: $show)
                     .animation(Animation.easeOut.delay(0.3))
@@ -224,12 +211,12 @@ struct BottomCardView: View {
                     Text("12 secciones de 12 completado\n10 horas en total")
                         .font(.footnote)
                         .foregroundColor(Color.gray)
-                    .lineSpacing(4)
+                        .lineSpacing(4)
                     
                 }
-            .padding(20)
+                .padding(20)
                 .background(Color("background3"))
-            .cornerRadius(20)
+                .cornerRadius(20)
                 .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 10)
             }
             

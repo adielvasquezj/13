@@ -19,6 +19,7 @@ struct TabBar: View {
                 Image(systemName: "rectangle.stack.fill")
               Text("Cursos")
             }
+            
         }
        // .edgesIgnoringSafeArea(.top)
     }
