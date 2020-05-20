@@ -33,7 +33,7 @@ struct Buttons: View {
                         )
                             .padding(2)
                             .blur(radius: 2)
-                        
+                        //
                     }
             )
                 .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
