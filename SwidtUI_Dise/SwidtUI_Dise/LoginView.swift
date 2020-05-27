@@ -11,61 +11,110 @@ import SwiftUI
 struct LoginView: View {
     @State var email = ""
     @State var password = ""
+    @State var isFocused = false
+    @State var showAlert = false
+    @State var alertMessage = "La contraseña que ingresaste es incorrecta."
+    
+   
+    func hideKeyBoard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
     
     var body: some View {
-        ZStack(alignment: .top) {
+        ZStack {
             Color.black
                 .edgesIgnoringSafeArea(.all)
-            Color("background2")
+            ZStack(alignment: .top) {
+                
+                Color("background2")
+                    .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
+                    .edgesIgnoringSafeArea(.bottom)
+                
+                CoverView()
+                
+                VStack {
+                    HStack {
+                        Image(systemName: "person.crop.circle.fill")
+                            .foregroundColor(Color((#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1))))
+                            .frame(width: 44, height: 44)
+                            .background(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
+                            .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+                            .shadow(color: Color.black.opacity(0.15), radius: 5, x: 0, y: 5)
+                            .padding(.leading)
+                        
+                        
+                        TextField("Tu Email".uppercased(), text: $email)
+                            .keyboardType(.emailAddress)
+                            .font(.subheadline)
+                            //  .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .padding(.leading)
+                            .frame(height: 44)
+                            .onTapGesture {
+                                self.isFocused = true
+                        }
+                    }
+                    Divider()
+                    .padding(.leading, 80)
+                    HStack {
+                        Image(systemName: "lock.fill")
+                            .foregroundColor(Color((#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1))))
+                            .frame(width: 44, height: 44)
+                            .background(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
+                            .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+                            .shadow(color: Color.black.opacity(0.15), radius: 5, x: 0, y: 5)
+                            .padding(.leading)
+                        
+                        
+                        SecureField("Contraseña".uppercased(), text: $password)
+                            .keyboardType(.default)
+                            .font(.subheadline)
+                            //  .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .padding(.leading)
+                            .frame(height: 44)
+                            .onTapGesture {
+                                self.isFocused = true
+                        }
+                    }
+                }
+                .frame(height: 136)
+                .frame(maxWidth: .infinity)
+                .background(BlurView(style: .systemMaterial))
                 .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
-                .edgesIgnoringSafeArea(.bottom)
-            
-            CoverView()
-            
-            VStack {
+                .shadow(color: Color.black.opacity(0.15), radius: 20, x: 0, y: 20)
+                .padding(.horizontal)
+                .offset(y: 460)
+                
                 HStack {
-                    Image(systemName: "person.crop.circle.fill")
-                        .foregroundColor(Color((#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1))))
-                        .frame(width: 44, height: 44)
-                        .background(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
-                        .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
-                        .shadow(color: Color.black.opacity(0.15), radius: 5, x: 0, y: 5)
-                        .padding(.leading)
-                    
-                    
-                    TextField("Tu Email".uppercased(), text: $email)
-                        .keyboardType(.emailAddress)
+                    Text("Olvidaste tu contraseñ?")
                         .font(.subheadline)
-                        //  .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .padding(.leading)
-                        .frame(height: 44)
-                }
-                Divider().padding(.leading, 80)
-                HStack {
-                    Image(systemName: "lock.fill")
-                        .foregroundColor(Color((#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1))))
-                        .frame(width: 44, height: 44)
-                        .background(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
-                        .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
-                        .shadow(color: Color.black.opacity(0.15), radius: 5, x: 0, y: 5)
-                        .padding(.leading)
+                    Spacer()
+                    Button(action:  {
+                        self.showAlert = true
+                        self.hideKeyBoard()
+                        self.isFocused = false
+                    }){
+                        Text("Entrar")
+                            .foregroundColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)))
+                    }
+                    .padding(12)
+                    .padding(.horizontal, 30)
+                    .background(Color(#colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)))
+                    .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
+                    .shadow(color: Color(#colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)).opacity(0.3), radius: 20, x: 0, y: 20)
+                    .alert(isPresented: $showAlert) {
+                        Alert(title: Text("Error"), message: Text(self.alertMessage), dismissButton: .default(Text("Ok")))
+                    }
                     
-                    
-                    SecureField("Contraseña".uppercased(), text: $password)
-                        .keyboardType(.default)
-                        .font(.subheadline)
-                        //  .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .padding(.leading)
-                        .frame(height: 44)
                 }
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+                .padding()
             }
-            .frame(height: 136)
-            .frame(maxWidth: .infinity)
-            .background(BlurView(style: .systemMaterial))
-            .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
-            .shadow(color: Color.black.opacity(0.15), radius: 20, x: 0, y: 20)
-            .padding(.horizontal)
-            .offset(y: 460)
+            .offset(y: isFocused ? -300 : 0)
+            .animation(isFocused ? .easeOut : nil)
+            .onTapGesture {
+                self.isFocused = false
+                self.hideKeyBoard()
+            }
         }
     }
 }
