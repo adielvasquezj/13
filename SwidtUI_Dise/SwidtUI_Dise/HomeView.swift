@@ -14,74 +14,76 @@ struct HomeView: View {
     @Binding var showContent: Bool
     
     var body: some View {
-        ScrollView {
-            VStack {
-                HStack(spacing: 12) {
-                    Text("Vista")
-                       .font(.system(size: 28, weight: .bold))
-                        .modifier(CustomFontModifier(size: 28))
-                    
-                    Spacer()
-                    
-                    AvatarView(showProfile: $showProfile)
-                    Button(action: { self.showUpdate.toggle() }) {
-                        Image(systemName: "bell")
-                          //  .renderingMode(.original)
-                            .foregroundColor(.primary)
-                            .font(.system(size: 16, weight: .medium))
-                            .frame(width: 36, height: 36)
-                            .background(Color("background3"))
-                            .clipShape(Circle())
-                            .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
-                            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 10)
+        GeometryReader { bounds in
+            ScrollView {
+                VStack {
+                    HStack(spacing: 12) {
+                        Text("Vista")
+                            .font(.system(size: 28, weight: .bold))
+                            .modifier(CustomFontModifier(size: 28))
                         
-                    }
-                    .sheet(isPresented: $showUpdate) {
-                        UpdateList()
-                    }
-                }
-                .padding(.horizontal)
-                .padding(.leading, 14)
-                .padding(.bottom, 30)
-                
-                ScrollView(.horizontal, showsIndicators: false) {
-                    WatchRingsView()
-                        .padding(.horizontal, 30)
-                        .padding(.bottom, 30)
-                        .onTapGesture {
-                            self.showContent = true
-                    }
-                }
-                
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 20){
-                        ForEach(sectionData) { item in
-                            GeometryReader { geometry in
-                                SectionView(section: item)
-                                    .rotation3DEffect(Angle(degrees: Double(geometry.frame(in: .global).minX - 30) / -20
-                                        ),
-                                                      axis: (x: 0, y: 10, z: 0))
-                            }
-                            .frame(width: 275, height: 275)
+                        Spacer()
+                        
+                        AvatarView(showProfile: self.$showProfile)
+                        Button(action: { self.showUpdate.toggle() }) {
+                            Image(systemName: "bell")
+                                //  .renderingMode(.original)
+                                .foregroundColor(.primary)
+                                .font(.system(size: 16, weight: .medium))
+                                .frame(width: 36, height: 36)
+                                .background(Color("background3"))
+                                .clipShape(Circle())
+                                .shadow(color: Color.black.opacity(0.1), radius: 1, x: 0, y: 1)
+                                .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 10)
+                            
+                        }
+                        .sheet(isPresented: self.$showUpdate) {
+                            UpdateList()
                         }
                     }
-                    .padding(30)
-                }
-                .offset(y: -30)
-                HStack {
-                    Text("Mas")
-                        .font(.title)
-                        .bold()
+                    .padding(.horizontal)
+                    .padding(.leading, 14)
+                    .padding(.bottom, 30)
+                    
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        WatchRingsView()
+                            .padding(.horizontal, 30)
+                            .padding(.bottom, 30)
+                            .onTapGesture {
+                                self.showContent = true
+                        }
+                    }
+                    
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 20){
+                            ForEach(sectionData) { item in
+                                GeometryReader { geometry in
+                                    SectionView(section: item)
+                                        .rotation3DEffect(Angle(degrees: Double(geometry.frame(in: .global).minX - 30) / -20
+                                            ),
+                                                          axis: (x: 0, y: 10, z: 0))
+                                }
+                                .frame(width: 275, height: 275)
+                            }
+                        }
+                        .padding(30)
+                    }
+                    .offset(y: -30)
+                    HStack {
+                        Text("Mas")
+                            .font(.title)
+                            .bold()
+                        Spacer()
+                    }
+                    .padding(.leading, 30)
+                    .offset(y: -35)
+                    
+                    SectionView(section: sectionData[2], width: bounds.size.width - 60, height: 275)
+                    
                     Spacer()
                 }
-                .padding(.leading, 30)
-                .offset(y: -35)
-                
-                SectionView(section: sectionData[2], width: screen.width - 60, height: 275)
-                
-                Spacer()
+                .frame(width: bounds.size.width)
             }
-            .frame(width: screen.width)
         }
     }
 }
@@ -89,6 +91,7 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView(showProfile: .constant(false), showContent: .constant(false))
+            .environmentObject(UserStore())
     }
 }
 
@@ -147,7 +150,7 @@ let sectionData = [
 
 
 struct WatchRingsView: View {
-   
+    
     var body: some View {
         HStack(spacing: 30) {
             HStack(spacing: 12.0) {
@@ -169,7 +172,7 @@ struct WatchRingsView: View {
                     .modifier(FontModifier())
             }
             .padding(8)
-           .background(Color("background3"))
+            .background(Color("background3"))
             .cornerRadius(20)
             .modifier(ShadowModifier())
             HStack(spacing: 12.0) {
@@ -178,7 +181,7 @@ struct WatchRingsView: View {
                     .modifier(FontModifier())
             }
             .padding(8)
-           .background(Color("background3"))
+            .background(Color("background3"))
             .cornerRadius(20)
             .modifier(ShadowModifier())
             
