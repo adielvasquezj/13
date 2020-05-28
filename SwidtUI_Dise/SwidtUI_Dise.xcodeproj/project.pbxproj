@@ -35,6 +35,8 @@
 		5A73E10A248006CE001EC194 /* 8597-eye.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A73E108248006CE001EC194 /* 8597-eye.json */; };
 		5A73E10C2480075E001EC194 /* MxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A73E10B2480075E001EC194 /* MxView.swift */; };
 		5A73E11024800EF0001EC194 /* MMxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A73E10F24800EF0001EC194 /* MMxView.swift */; };
+		5A73E11224801565001EC194 /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A73E11124801565001EC194 /* SuccessView.swift */; };
+		5A73E11424801607001EC194 /* 5449-success-tick.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A73E11324801607001EC194 /* 5449-success-tick.json */; };
 		5AE8AED8246B99EB006B1709 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8AED7246B99EB006B1709 /* AppDelegate.swift */; };
 		5AE8AEDC246B99EB006B1709 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8AEDB246B99EB006B1709 /* ContentView.swift */; };
 		5AE8AEDE246B99F8006B1709 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AE8AEDD246B99F8006B1709 /* Assets.xcassets */; };
@@ -96,6 +98,8 @@
 		5A73E108248006CE001EC194 /* 8597-eye.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "8597-eye.json"; sourceTree = "<group>"; };
 		5A73E10B2480075E001EC194 /* MxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MxView.swift; sourceTree = "<group>"; };
 		5A73E10F24800EF0001EC194 /* MMxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMxView.swift; sourceTree = "<group>"; };
+		5A73E11124801565001EC194 /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
+		5A73E11324801607001EC194 /* 5449-success-tick.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "5449-success-tick.json"; sourceTree = "<group>"; };
 		5AE8AED4246B99EA006B1709 /* SwidtUI_Dise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwidtUI_Dise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE8AED7246B99EB006B1709 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5AE8AEDB246B99EB006B1709 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -179,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				5A73E107248006CE001EC194 /* 2755-mexico.json */,
+				5A73E11324801607001EC194 /* 5449-success-tick.json */,
 				5A73E108248006CE001EC194 /* 8597-eye.json */,
 			);
 			path = mx;
@@ -230,6 +235,7 @@
 				5AE8AF15246CE886006B1709 /* TabBar.swift */,
 				5A73E10B2480075E001EC194 /* MxView.swift */,
 				5A73E10F24800EF0001EC194 /* MMxView.swift */,
+				5A73E11124801565001EC194 /* SuccessView.swift */,
 				5A58E37B2470D54D00BA0280 /* BlurView.swift */,
 				5A4FE1C1247580E700C7D67A /* Buttons.swift */,
 				5AE8AEDD246B99F8006B1709 /* Assets.xcassets */,
@@ -387,6 +393,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A73E11424801607001EC194 /* 5449-success-tick.json in Resources */,
 				5A70665A246DA82600482080 /* OFL.txt in Resources */,
 				5A706657246DA82600482080 /* LibreCaslonText-Italic.ttf in Resources */,
 				5A706654246DA82600482080 /* LibreCaslonText-Regular.ttf in Resources */,
@@ -547,6 +554,7 @@
 				5A706647246D628B00482080 /* SceneDelegate.swift in Sources */,
 				5A1C1DC8246EFFB60067ADF0 /* PostList.swift in Sources */,
 				5AE8AF0A246C906A006B1709 /* Home.swift in Sources */,
+				5A73E11224801565001EC194 /* SuccessView.swift in Sources */,
 				5A4B39AF2476026500747CD2 /* LoginView.swift in Sources */,
 				5A4FE1C2247580E700C7D67A /* Buttons.swift in Sources */,
 				5A73E10C2480075E001EC194 /* MxView.swift in Sources */,

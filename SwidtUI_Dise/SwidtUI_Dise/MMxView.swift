@@ -12,7 +12,7 @@ struct MMxView: View {
     var body: some View {
         VStack {
             MxView(fileName: "8597-eye")
-                .frame(width: 150, height: 150)
+                .frame(width: 200, height: 200)
         }
              
            

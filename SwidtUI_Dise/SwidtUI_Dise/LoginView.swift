@@ -14,8 +14,26 @@ struct LoginView: View {
     @State var isFocused = false
     @State var showAlert = false
     @State var alertMessage = "La contraseña que ingresaste es incorrecta."
-      @State var estaCargando = false
-   
+    @State var estaCargando = false
+    @State var isSuccessful = false
+    
+    
+    func login() {
+       self.hideKeyBoard()
+        self.isFocused = false
+        self.estaCargando = true
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.estaCargando = false
+            // self.showAlert = true
+            self.isSuccessful = true
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                self.isSuccessful = false
+            }
+        }
+    }
+    
     func hideKeyBoard() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
@@ -89,15 +107,8 @@ struct LoginView: View {
                         .font(.subheadline)
                     Spacer()
                     Button(action:  {
-                      
-                        self.hideKeyBoard()
-                        self.isFocused = false
-                        self.estaCargando = true
-                        
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                            self.estaCargando = false
-                              self.showAlert = true
-                        }
+                        self.login()
+                       
                     }){
                         Text("Entrar")
                             .foregroundColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)))
@@ -124,6 +135,9 @@ struct LoginView: View {
             if estaCargando {
                 MMxView()
             }
+            if isSuccessful {
+                SuccessView()
+            }
         }
     }
 }
@@ -142,7 +156,7 @@ struct CoverView: View {
     var body: some View {
         VStack {
             GeometryReader { geometry in
-                Text("Learn design & code. \nFrom scratch")
+                Text("Bienvenidos a  \n la chingada ")
                     .font(.system(size: geometry.size.width/10, weight: .bold))
                     .foregroundColor(.white)
                 
