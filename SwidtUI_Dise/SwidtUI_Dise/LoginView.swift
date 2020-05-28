@@ -14,7 +14,7 @@ struct LoginView: View {
     @State var isFocused = false
     @State var showAlert = false
     @State var alertMessage = "La contraseña que ingresaste es incorrecta."
-    
+      @State var estaCargando = false
    
     func hideKeyBoard() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
@@ -89,9 +89,15 @@ struct LoginView: View {
                         .font(.subheadline)
                     Spacer()
                     Button(action:  {
-                        self.showAlert = true
+                      
                         self.hideKeyBoard()
                         self.isFocused = false
+                        self.estaCargando = true
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                            self.estaCargando = false
+                              self.showAlert = true
+                        }
                     }){
                         Text("Entrar")
                             .foregroundColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)))
@@ -114,6 +120,9 @@ struct LoginView: View {
             .onTapGesture {
                 self.isFocused = false
                 self.hideKeyBoard()
+            }
+            if estaCargando {
+                MMxView()
             }
         }
     }

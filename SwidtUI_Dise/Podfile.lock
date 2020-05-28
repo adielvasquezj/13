@@ -2,6 +2,7 @@ PODS:
   - Contentful (5.0.11):
     - Contentful/ImageOptions (= 5.0.11)
   - Contentful/ImageOptions (5.0.11)
+  - lottie-ios (3.1.8)
   - SDWebImage (5.8.0):
     - SDWebImage/Core (= 5.8.0)
   - SDWebImage/Core (5.8.0)
@@ -10,19 +11,22 @@ PODS:
 
 DEPENDENCIES:
   - Contentful (~> 5.0.0)
+  - lottie-ios
   - SDWebImageSwiftUI
 
 SPEC REPOS:
   trunk:
     - Contentful
+    - lottie-ios
     - SDWebImage
     - SDWebImageSwiftUI
 
 SPEC CHECKSUMS:
   Contentful: 6608ce5f58c9278a871a7fd3e6e85c2fcb1d2dca
+  lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
   SDWebImage: 84000f962cbfa70c07f19d2234cbfcf5d779b5dc
   SDWebImageSwiftUI: 034806fc7e19e0a36157fb8ecb9fc0437cc75230
 
-PODFILE CHECKSUM: 8e4fc6385947b6cdea20929490b3d91b4c86cc99
+PODFILE CHECKSUM: 8dba532add82aada45c70eb54bd64b1d59870f04
 
 COCOAPODS: 1.9.1

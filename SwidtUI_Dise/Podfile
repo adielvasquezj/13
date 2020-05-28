@@ -18,5 +18,7 @@ target 'SwidtUI_Dise' do
 
 pod 'Contentful', '~> 5.0.0'
 pod 'SDWebImageSwiftUI'
+pod  'lottie-ios'
+
 
 end
