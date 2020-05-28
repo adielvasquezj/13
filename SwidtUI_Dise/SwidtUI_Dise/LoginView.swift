@@ -7,8 +7,12 @@
 //Geometry reader detecta el tamaño d la pantaya!
 
 import SwiftUI
+import Firebase
+
+
 
 struct LoginView: View {
+    
     @State var email = ""
     @State var password = ""
     @State var isFocused = false
@@ -23,15 +27,27 @@ struct LoginView: View {
         self.isFocused = false
         self.estaCargando = true
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            self.estaCargando = false
-            // self.showAlert = true
-            self.isSuccessful = true
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                self.isSuccessful = false
-            }
+      
+        Auth.auth()
+            .signIn(withEmail: email, password: password) {
+                (result, error) in
+                self.estaCargando = false
+                if error != nil {
+                    self.alertMessage = error?.localizedDescription ?? "Error :("
+                        self.showAlert = true
+                } else {
+                    
+                    self.isSuccessful = true
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                        self.isSuccessful = false
+                        self.email = ""
+                        self.password = ""
+                    }
+                    
+                }
         }
+    
     }
     
     func hideKeyBoard() {
@@ -103,7 +119,7 @@ struct LoginView: View {
                 .offset(y: 460)
                 
                 HStack {
-                    Text("Olvidaste tu contraseñ?")
+                    Text("Olvidaste tu contraseña?")
                         .font(.subheadline)
                     Spacer()
                     Button(action:  {
