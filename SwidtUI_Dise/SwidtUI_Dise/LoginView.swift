@@ -20,6 +20,7 @@ struct LoginView: View {
     @State var alertMessage = "La contraseña que ingresaste es incorrecta."
     @State var estaCargando = false
     @State var isSuccessful = false
+    @EnvironmentObject var user: UserStore
     
     
     func login() {
@@ -38,11 +39,13 @@ struct LoginView: View {
                 } else {
                     
                     self.isSuccessful = true
+                    self.user.isLogged = true
                     
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                        self.isSuccessful = false
                         self.email = ""
                         self.password = ""
+                        self.isSuccessful = false
+                        self.user.showLogin = false
                     }
                     
                 }
@@ -200,15 +203,15 @@ struct CoverView: View {
                     .offset(x: -150, y: -200)
                     .rotationEffect(Angle(degrees: show ? 360+90 : 90))
                     .blendMode(.plusDarker)
-                    //  .animation(Animation.linear(duration: 120).repeatForever(autoreverses: false))
-                    .animation(nil)
+                    .animation(Animation.linear(duration: 120).repeatForever(autoreverses: false))
+                   // .animation(nil)
                     .onAppear { self.show = true }
                 Image(uiImage: #imageLiteral(resourceName: "Blob"))
                     .offset(x: -200, y: -250)
                     .rotationEffect(Angle(degrees: show ? 360 : 0), anchor: .leading)
                     .blendMode(.overlay)
-                    // .animation(Animation.linear(duration: 120)
-                    //.repeatForever(autoreverses: false))
+                     .animation(Animation.linear(duration: 120)
+                    .repeatForever(autoreverses: false))
                     .animation(nil)
         })
             .background(ZStack {

@@ -38,6 +38,7 @@
 		5A73E11224801565001EC194 /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A73E11124801565001EC194 /* SuccessView.swift */; };
 		5A73E11424801607001EC194 /* 5449-success-tick.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A73E11324801607001EC194 /* 5449-success-tick.json */; };
 		5A73E11624803196001EC194 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A73E11524803196001EC194 /* GoogleService-Info.plist */; };
+		5A73E11824804B15001EC194 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A73E11724804B15001EC194 /* UserStore.swift */; };
 		5AE8AED8246B99EB006B1709 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8AED7246B99EB006B1709 /* AppDelegate.swift */; };
 		5AE8AEDC246B99EB006B1709 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE8AEDB246B99EB006B1709 /* ContentView.swift */; };
 		5AE8AEDE246B99F8006B1709 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AE8AEDD246B99F8006B1709 /* Assets.xcassets */; };
@@ -102,6 +103,7 @@
 		5A73E11124801565001EC194 /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
 		5A73E11324801607001EC194 /* 5449-success-tick.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "5449-success-tick.json"; sourceTree = "<group>"; };
 		5A73E11524803196001EC194 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5A73E11724804B15001EC194 /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
 		5AE8AED4246B99EA006B1709 /* Mexico.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mexico.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE8AED7246B99EB006B1709 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5AE8AEDB246B99EB006B1709 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 				5AE8AF09246C906A006B1709 /* Home.swift */,
 				5AE8AF0D246CA290006B1709 /* HomeView.swift */,
 				5A4B39AE2476026500747CD2 /* LoginView.swift */,
+				5A73E11724804B15001EC194 /* UserStore.swift */,
 				5A70665D246DD39E00482080 /* CourseList.swift */,
 				5AE8AF07246C7D9C006B1709 /* MenuView.swift */,
 				5AE8AF0F246CCDF5006B1709 /* UpdateList.swift */,
@@ -558,6 +561,7 @@
 				5A706647246D628B00482080 /* SceneDelegate.swift in Sources */,
 				5A1C1DC8246EFFB60067ADF0 /* PostList.swift in Sources */,
 				5AE8AF0A246C906A006B1709 /* Home.swift in Sources */,
+				5A73E11824804B15001EC194 /* UserStore.swift in Sources */,
 				5A73E11224801565001EC194 /* SuccessView.swift in Sources */,
 				5A4B39AF2476026500747CD2 /* LoginView.swift in Sources */,
 				5A4FE1C2247580E700C7D67A /* Buttons.swift in Sources */,
