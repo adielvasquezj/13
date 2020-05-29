@@ -46,22 +46,22 @@ struct UpdateList: View {
                         }
                         .padding(.vertical, 8)
                     }
-                
+                    
                 }
                 .onDelete { index in
                     self.store.updates.remove(at: index.first!)
                 }
-                
+                    
                 .onMove { (source: IndexSet, destination: Int) in
                     self.store.updates.move(fromOffsets: source, toOffset: destination)
                 }
             }
             .navigationBarTitle(Text("Actualizaciones"))
-        .navigationBarItems(leading: Button(action: addUpdate) {
-        Text("Agregar actualizaciones")
-        }, trailing: EditButton())
+            .navigationBarItems(leading: Button(action: addUpdate) {
+                Text("Agregar actualizaciones")
+            }, trailing: EditButton())
         }
-    .navigationViewStyle(StackNavigationViewStyle())
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

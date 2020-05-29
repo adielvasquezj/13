@@ -73,9 +73,9 @@ struct LoginView: View {
                 VStack {
                     HStack {
                         Image(systemName: "person.crop.circle.fill")
-                            .foregroundColor(Color((#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1))))
+                            .foregroundColor(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
                             .frame(width: 44, height: 44)
-                            .background(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
+                            .background(Color("background1"))
                             .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
                             .shadow(color: Color.black.opacity(0.15), radius: 5, x: 0, y: 5)
                             .padding(.leading)
@@ -97,7 +97,7 @@ struct LoginView: View {
                         Image(systemName: "lock.fill")
                             .foregroundColor(Color((#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1))))
                             .frame(width: 44, height: 44)
-                            .background(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
+                            .background(Color("background1"))
                             .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
                             .shadow(color: Color.black.opacity(0.15), radius: 5, x: 0, y: 5)
                             .padding(.leading)

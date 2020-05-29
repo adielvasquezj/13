@@ -19,7 +19,7 @@ struct SuccessView: View {
                 .opacity(show ? 1 : 0)
                 .animation(Animation.linear(duration: 1).delay(0.2))
             
-            MxView(fileName: "5449-success-tick")
+            MxView(fileName: "4973-check-animation")
             .frame(width: 300, height: 300)
              .animation(Animation.linear(duration: 1).delay(0.4))
         }

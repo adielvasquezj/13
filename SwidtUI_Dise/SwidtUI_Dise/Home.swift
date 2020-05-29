@@ -123,7 +123,7 @@ struct AvatarView: View {
         VStack {
             if user.isLogged {
                 Button(action: { self.showProfile.toggle() }) {
-                    Image("avatar")
+                    Image("ixta")
                         .renderingMode(.original)
                         .resizable()
                         .frame(width: 36, height: 36)
