@@ -16,9 +16,9 @@ struct CourseList: View {
     @State var activeIndex = -1
     @State var activeView = CGSize.zero
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
-    
+    @State var isScrolable = false
     var body: some View {
-       GeometryReader { bounds in
+        GeometryReader { bounds in
             ZStack {
                 Color.black.opacity(Double(self.activeView.height/500))
                     .animation(.linear)
@@ -41,7 +41,8 @@ struct CourseList: View {
                                 
                                 CourseView(show: self.$store.courses[index].show,
                                            active: self.$active, index: index, activeIndex: self.$activeIndex,
-                                           course: self.store.courses[index], activeView: self.$activeView, bounds: bounds)
+                                           course: self.store.courses[index], activeView: self.$activeView, bounds: bounds, isScrolable: self.$isScrolable
+                                )
                                     .offset(y: self.store.courses[index].show ? -geometry.frame(in: .global).minY : 0)
                                     .opacity(self.activeIndex != index && self.active ? 0 : 1)
                                     .scaleEffect(self.activeIndex != index && self.active ? 0.5 : 1)
@@ -60,7 +61,8 @@ struct CourseList: View {
                 }
                     
                 .statusBar(hidden: self.active ? true : false)
-                .animation(.easeInOut)
+                .animation(.linear)
+                .disabled(self.active && !self.isScrolable ? true : false)
             }
         }
     }
@@ -95,6 +97,7 @@ struct CourseView: View {
     var course: Course
     @Binding var activeView : CGSize
     var bounds: GeometryProxy
+    @Binding var isScrolable : Bool
     
     var body: some View {
         ZStack(alignment: .top) {
@@ -112,10 +115,11 @@ struct CourseView: View {
                 
                 
             }
+            .animation(nil)
             .padding(30)
             .frame(maxWidth: show ? .infinity : screen.width - 60, maxHeight: show ? .infinity : 280, alignment: .top)
             .offset(y: show ? 450 : 0)
-            .background(Color("background2"))
+            .background(Color("background1"))
             .clipShape(RoundedRectangle(cornerRadius: show ? getCardCornerRadius(bounds: bounds) : 30, style: .continuous))
             .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 20)
             .opacity(show ? 1 : 0)
@@ -143,6 +147,7 @@ struct CourseView: View {
                         .background(Color.black)
                         .clipShape(Circle())
                         .opacity(show ? 1 : 0)
+                        .offset(x: 2, y: -2)
                     }
                 }
                 Spacer()
@@ -175,6 +180,7 @@ struct CourseView: View {
                                 self.show = false
                                 self.active = false
                                 self.activeIndex = -1
+                                self.isScrolable = false
                                 
                             }
                             self.activeView = .zero
@@ -191,14 +197,21 @@ struct CourseView: View {
                     } else {
                         self.activeIndex = -1
                     }
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+                        self.isScrolable = true
+                    }
             }
-            if show {
-                //    CourseDetail(course: course, show: $show, active: $active, activeIndex: $activeIndex)
-                //        .background(Color.white)
-                // .animation(nil)
+            if isScrolable {
+                CourseDetail(course: course, show: $show, active: $active, activeIndex: $activeIndex, isScrolable: $isScrolable, bounds: bounds)
+                    .background(Color.white)
+                    .clipShape(RoundedRectangle(cornerRadius: show ? getCardCornerRadius(bounds: bounds) : 30, style: .continuous))
+                    .animation(nil)
+                    .transition(.identity)
+                
             }
             
         }
+            
         .frame(height: show ? bounds.size.height + bounds.safeAreaInsets.top + bounds.safeAreaInsets.bottom : 280)
         .scaleEffect(1 - self.activeView.height / 1000)
         .rotation3DEffect(Angle(degrees: Double(self.activeView.height / 10)), axis: (x: 0, y: 10, z: 0))
@@ -208,7 +221,7 @@ struct CourseView: View {
             show ?
                 DragGesture().onChanged { value in
                     guard value.translation.height < 300 else { return }
-                    guard value.translation.height > 0 else { return }
+                    guard value.translation.height > 50 else { return }
                     
                     self.activeView = value.translation
                     
@@ -218,6 +231,7 @@ struct CourseView: View {
                         self.show = false
                         self.active = false
                         self.activeIndex = -1
+                        self.isScrolable = false
                         
                     }
                     self.activeView = .zero
@@ -225,7 +239,7 @@ struct CourseView: View {
                 }
                 : nil
         )
-            
+            .disabled(active && !isScrolable ? true : false)
             .edgesIgnoringSafeArea(.all)
     }
 }
