@@ -35,7 +35,8 @@
     @Published var courses: [Course] = courseData
     
     init() {
-        let colors = [#colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1),#colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1),#colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1),#colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1),#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1),#colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)]
+        let colors = [#colorLiteral(red: 0.1960784346, green: 0.3411764801, blue: 0.1019607857, alpha: 1),#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1),#colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1),#colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1),#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1),#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)]
+        var index = 0
         getArray(id: "course") { (items) in
             items.forEach { (item) in
                 self.courses.append(Course(
@@ -44,8 +45,10 @@
                     image: item.fields.linkedAsset(at:
                         "image")?.url ?? URL(string: " ")!,
                     logo: #imageLiteral(resourceName: "Logo3"),
-                    color: colors.randomElement()!,
+                  //  color: colors.randomElement()!,
+                    color: colors[index],
                     show: false))
+                index = index + 1
             }
         }
     }

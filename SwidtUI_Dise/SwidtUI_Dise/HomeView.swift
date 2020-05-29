@@ -13,6 +13,11 @@ struct HomeView: View {
     @State var showUpdate = false
     @Binding var showContent: Bool
     @Binding var viewState: CGSize
+    @ObservedObject var store = CourseStore()
+    @State var active = false
+    @State var activeIndex = -1
+    @State var activeView = CGSize.zero
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
     
     
     var body: some View {
@@ -45,7 +50,8 @@ struct HomeView: View {
                     }
                     .padding(.horizontal)
                     .padding(.leading, 14)
-                    .padding(.bottom, 30)
+                    .padding(.top, 30)
+                      .blur(radius: self.active ? 20 : 0)
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         WatchRingsView()
@@ -55,6 +61,7 @@ struct HomeView: View {
                                 self.showContent = true
                         }
                     }
+                      .blur(radius: self.active ? 20 : 0)
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 20){
@@ -69,8 +76,11 @@ struct HomeView: View {
                             }
                         }
                         .padding(30)
+                        .padding(.bottom, 30)
                     }
                     .offset(y: -30)
+                      .blur(radius: self.active ? 20 : 0)
+                    
                     HStack {
                         Text("Mas")
                             .font(.title)
@@ -78,9 +88,31 @@ struct HomeView: View {
                         Spacer()
                     }
                     .padding(.leading, 30)
-                    .offset(y: -35)
+                    .offset(y: -60)
+                    .blur(radius: self.active ? 20 : 0)
                     
-                    SectionView(section: sectionData[2], width: bounds.size.width - 60, height: 275)
+                    VStack(spacing: 30) {
+                        ForEach(self.store.courses.indices, id: \.self) { index in
+                            GeometryReader { geometry in
+                                
+                                
+                                CourseView(show: self.$store.courses[index].show,
+                                           active: self.$active, index: index, activeIndex: self.$activeIndex,
+                                           course: self.store.courses[index], activeView: self.$activeView, bounds: bounds)
+                                    .offset(y: self.store.courses[index].show ? -geometry.frame(in: .global).minY : 0)
+                                    .opacity(self.activeIndex != index && self.active ? 0 : 1)
+                                    .scaleEffect(self.activeIndex != index && self.active ? 0.5 : 1)
+                                    .offset(x: self.activeIndex != index && self.active ? bounds.size.width : 0)
+                                
+                            }
+                            .frame(height: self.horizontalSizeClass == .regular ? 80 : 280)
+                            .frame(maxWidth: self.store.courses[index].show ? 712 : getCardWidth(bounds: bounds))
+                                //.zIndex Es para encimar algo
+                                .zIndex(self.store.courses[index].show ? 1: 0)
+                        }
+                    }
+                    .padding(.bottom, 300)
+                     .offset(y: -60)
                     
                     Spacer()
                 }
@@ -100,7 +132,7 @@ func getAngleMultiplier(bounds: GeometryProxy) -> Double {
     if bounds.size.width > 500 {
         return 80
     } else {
-       return 20
+        return 20
     }
 }
 
