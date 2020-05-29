@@ -61,6 +61,7 @@ struct UpdateList: View {
         Text("Agregar actualizaciones")
         }, trailing: EditButton())
         }
+    .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

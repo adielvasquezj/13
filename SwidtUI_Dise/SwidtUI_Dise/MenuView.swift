@@ -44,7 +44,7 @@ struct MenuView: View {
                 
                 
             }
-            .frame(maxWidth: .infinity)
+            .frame(maxWidth: 500)
             .frame(height: 300)
             .background(BlurView(style: .systemThickMaterial))
             .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
