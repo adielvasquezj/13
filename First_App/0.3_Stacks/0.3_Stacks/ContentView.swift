@@ -12,53 +12,30 @@ struct ContentView: View {
     var body: some View {
         VStack {
             HeaderView()
-            HStack {
-                VStack {
-                    Text("Plan Básico")
-                        .font(.system(.title, design: .rounded))
-                        .fontWeight(.black)
+            
+            HStack(spacing: 8) {
+                    CourseView(titulo: "Básico", subtitulo: "Un curso incluído", precio: "$9.99 d", textColor: Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)), backGroundColor: Color(#colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)))
+                    ZStack {
+                        CourseView(titulo: "Carrera", subtitulo: "Toda una carrera", precio: "$29.99 D", textColor: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)), backGroundColor: Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)))
+                        Text("El mejor para empezar")
+                            .font(.system(.caption, design: .rounded))
                         .foregroundColor(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
+                            .fontWeight(.black)
+                             .padding(8)
+                        .background(Color(#colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)))
+                        .offset(x: 0, y: -85)
+                       
+                    }
                     
-                    Text("9.99USD")
-                        .font(.system(size: 25, weight: .heavy, design: .rounded))
-                        .foregroundColor(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
-                    
-                    Text("Un curso incluído")
-                        .font(.headline)
-                        .foregroundColor(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
+                  
                 }
-                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 100)
-                .padding(30)
-                .background(Color(#colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)))
-                .cornerRadius(10)
-                
-                
-                VStack {
-                    Text("Plan Premium")
-                        .font(.system(.title, design: .rounded))
-                        .fontWeight(.bold)
-                        .foregroundColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)))
-                    
-                    Text("29.99USD")
-                        .font(.system(size: 25, weight: .heavy, design: .rounded))
-                        .foregroundColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)))
-                    
-                    Text("Toda una carrera")
-                        .font(.headline)
-                        .foregroundColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)))
-                }
-                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 100)
-                .padding(30)
-                .background(Color(#colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)))
-                .cornerRadius(10)
-                
-            }
+        .lineLimit(2)
+                .padding(.horizontal)
+        
+       
             
         }
-        .background(Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)).opacity(0.5))
-        .cornerRadius(12)
-    .padding()
-        
+       
     }
 }
 
@@ -71,12 +48,47 @@ struct ContentView_Previews: PreviewProvider {
 struct HeaderView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
-            Text("Elije tu itinerario")
+            Text("Elige tu itinerario")
                 .font(.system(size: 35, weight: .bold, design: .rounded))
             
             
             Text(" de aprendizaje")
                 .font(.system(size: 35, weight: .bold, design: .rounded))
         }
+    }
+}
+
+struct CourseView: View {
+    
+    var titulo: String
+    var subtitulo: String
+    var precio: String
+    var textColor : Color
+    var backGroundColor: Color
+    
+    
+    
+    var body: some View {
+       
+            VStack {
+              
+                Text(titulo)
+                    .font(.system(.title, design: .rounded))
+                    .fontWeight(.black)
+                    .foregroundColor(textColor)
+                
+                Text(precio)
+                    .font(.system(size: 25, weight: .heavy, design: .rounded))
+                    .foregroundColor(textColor)
+                
+                Text(subtitulo)
+                    .font(.headline)
+                    .foregroundColor(textColor)
+            }
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 100)
+            .padding(30)
+            .background(backGroundColor)
+            .cornerRadius(10)
+        
     }
 }
