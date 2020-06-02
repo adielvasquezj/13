@@ -1,0 +1,64 @@
+print(3 + 2)
+
+
+print(3 - 2)
+
+print(3 * 2)
+print(3 / 2)
+
+
+print(1.2 * 3)
+
+#Modulo
+
+print(3%2)
+
+
+#Assignacion de una variable
+
+n = 3
+print(n)
+
+print(n * n + 19)
+
+m = 9
+
+print(n * m)
+
+m = n
+print(m)
+
+
+nota_1 = 7.5
+nota_2 = 5
+notaMedia = (nota_1 + nota_2) / 2
+
+#Textos
+
+print("Nota media",notaMedia)
+
+
+print("Un texto una\tuna tabulación")
+
+print("Un texto\nUna nueva linea")
+
+print(r"C:\Nombre\Directorio")
+
+print("""
+      Primera linea
+      Segunda linea 
+      y una\ttabulación
+       """)
+
+
+c = "Es una cadena\ncon dos lineas"
+print(c)
+
+c + c
+print(c)
+
+s = "Una cadena" "Compuesta de dos cadenas"
+print(s)
+
+c1 = "Cadena 1"
+print("Suma " + c1 )

@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  First_App
+//  01_First_App
 //
-//  Created by kernel-root on 4/24/20.
-//  Copyright © 2020 kernel-root. All rights reserved.
+//  Created by roott on 6/2/20.
+//  Copyright © 2020 roott. All rights reserved.
 //
 
 import UIKit
