@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-//Cómo oscurecer una imagen con capas adicionales
+// 
 struct ContentView: View {
     var body: some View {
         GeometryReader { bounds in
