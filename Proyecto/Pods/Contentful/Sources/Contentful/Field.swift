@@ -89,7 +89,8 @@ public struct Field: Decodable {
         } else if type == FieldType.link {
             itemTypeString = try container.decode(String.self, forKey: .linkType)
         }
-        self.itemType = FieldType(rawValue: itemTypeString ?? FieldType.none.rawValue) ?? .none
+      //  self.itemType = FieldType(rawValue: itemTypeString ?? FieldType.none.rawValue) ?? .none
+        self.itemType = FieldType(rawValue: itemTypeString ?? FieldType.none.rawValue) ?? nil
     }
 
     private enum CodingKeys: String, CodingKey {
