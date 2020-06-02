@@ -10,10 +10,34 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Image(systemName: "recordingtape")
-            .font(.system(size: 80, weight: .semibold, design: .rounded))
-        .foregroundColor(Color(#colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)))
-        .shadow(color: Color(#colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)), radius: 10, x: 0, y: 10)
+        GeometryReader { bounds in
+            Image("ny")
+                .resizable()
+                .edgesIgnoringSafeArea(.vertical)
+                //  .padding(.all, -40)
+                //  .scaledToFit()
+                .aspectRatio(contentMode: .fill)
+                .frame(maxWidth: 300)
+                .clipShape(Capsule())
+                .opacity(0.9)
+                .overlay(
+                    /*Image(systemName: "heart.fill")
+                     .font(.system(size: 40, weight: .semibold, design: .rounded))
+                     .foregroundColor(Color(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)))
+                     .opacity(0.5)*/
+                    
+                    GeometryReader { bounds in
+                        Text("Seguridad en el manejo de archivos Tu privacidad está garantizada. Nadie tiene acceso a tus archivos JPG y PDF y se eliminarán de manera permanente de nuestros servidores cuando haya pasado una hora.")
+                            .font(.system(size: 22, weight: .heavy, design: .rounded))
+                            .padding()
+                            .background(Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)).opacity(0.5))
+                            .cornerRadius(10)
+                            .padding()
+                    } , alignment: .center
+                    
+                    
+            )
+        }
     }
 }
 
