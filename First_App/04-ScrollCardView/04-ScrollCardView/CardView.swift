@@ -10,7 +10,14 @@ import SwiftUI
 
 struct CardView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        GeometryReader { bounds in
+            ScrollView {
+            ContentView(imageName: "marte", planetName: "Marte", Subline: "Marte es un planeta rocoso", cross: "Marte no es  gaseoso")
+            ContentView(imageName: "luna", planetName: "La luna", Subline: "La luna es un satelite natural de la tierra", cross: "La luna no es un planeta")
+            ContentView(imageName: "saturno", planetName: "Saturno", Subline: "Saturno es un planeta gaseoso", cross: "Saturno no es un planeta rocoso")
+            ContentView(imageName: "venus", planetName: "Venus", Subline: "Venus es un planeta rocoso", cross: "Venus no es un planeta gaseoso")
+            }
+        }
     }
 }
 
