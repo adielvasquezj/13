@@ -11,7 +11,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ZStack {
-        Color(#colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1))
+            Color(#colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1))
             GeometryReader { value in
                 VStack {
                     HeaderView()
@@ -27,23 +27,23 @@ struct ContentView: View {
                                 .padding(8)
                                 .background(Color(#colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)))
                                 .offset(x: 0, y: -85)
-                                }
-                            
-                        } .padding(.horizontal)
-                        ZStack {
-                            CourseView(titulo: "Definitivo", subtitulo: "Todos los cursos onle", precio: "99.99 USD", textColor: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), backGroundColor: Color(#colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)), icon: "lightbulb")
-                                .padding(.horizontal)
-                            
-                            Text("Conviertete en un máster del universo")
-                                .font(.system(.caption, design: .rounded))
+                        }
+                        
+                    } .padding(.horizontal)
+                    ZStack {
+                        CourseView(titulo: "Definitivo", subtitulo: "Todos los cursos onle", precio: "99.99 USD", textColor: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), backGroundColor: Color(#colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)), icon: "lightbulb")
+                            .padding(.horizontal)
+                        
+                        Text("Conviertete en un máster del universo")
+                            .font(.system(.caption, design: .rounded))
                             .foregroundColor(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
-                                .fontWeight(.black)
+                            .fontWeight(.black)
                             .padding(8)
                             .background(Color(#colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)))
                             .offset(x: 0, y: -85)
-                        }
-                        .padding(.vertical)
-               Spacer()
+                    }
+                    .padding(.vertical)
+                    Spacer()
                 }
             }
         }
@@ -71,9 +71,9 @@ struct HeaderView: View {
             }
             .offset(x: 0, y: 20)
             Spacer()
-        
+            
         }
-    .padding()
+        .padding()
     }
 }
 
@@ -89,33 +89,33 @@ struct CourseView: View {
     
     
     var body: some View {
-       
-            VStack {
-               // if icon != nil {
-                icon.map({
-                    Image(systemName:$0) //$0 = icon
-                        .font(.largeTitle)
-                        .foregroundColor(.white)
-               // }
-                    })
-              
-                Text(titulo)
-                    .font(.system(.title, design: .rounded))
-                    .fontWeight(.black)
-                    .foregroundColor(textColor)
-                
-                Text(precio)
-                    .font(.system(size: 25, weight: .heavy, design: .rounded))
-                    .foregroundColor(textColor)
-                
-                Text(subtitulo)
-                    .font(.headline)
-                    .foregroundColor(textColor)
-            }
-            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 100)
-            .padding(30)
-            .background(backGroundColor)
-            .cornerRadius(10)
+        
+        VStack {
+            // if icon != nil {
+            icon.map({
+                Image(systemName:$0) //$0 = icon
+                    .font(.largeTitle)
+                    .foregroundColor(.white)
+                // }
+            })
+            
+            Text(titulo)
+                .font(.system(.title, design: .rounded))
+                .fontWeight(.black)
+                .foregroundColor(textColor)
+            
+            Text(precio)
+                .font(.system(size: 25, weight: .heavy, design: .rounded))
+                .foregroundColor(textColor)
+            
+            Text(subtitulo)
+                .font(.headline)
+                .foregroundColor(textColor)
+        }
+        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 100)
+        .padding(30)
+        .background(backGroundColor)
+        .cornerRadius(10)
         
     }
 }
