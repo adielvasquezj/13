@@ -17,12 +17,19 @@ struct ContentView: View {
         }) {
             //Cómo debe verse el botón
             Text("Hello world")
-                
-                .background(Color(#colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)))
-                .padding()
-                .foregroundColor(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
-                .font(.system(.largeTitle, design: .rounded))
-            
+               // .padding()
+                 .font(.largeTitle)
+            .padding()
+                .background(Color(#colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)))
+                .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+               // .font(.largeTitle)
+            .cornerRadius(50)
+               .padding(12)
+            .overlay(
+            RoundedRectangle(cornerRadius: 50)
+             .stroke(Color(#colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)), lineWidth: 4)
+            )
+                //.border(Color(#colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)), width: 6)
                 
         }
         
