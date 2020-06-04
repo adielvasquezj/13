@@ -42,6 +42,7 @@ struct ContentView: View {
                Image(systemName: "trash")
                     Text("Eliminar")
                 }
+                .frame(minWidth: 0, maxWidth: .infinity)
                 .padding()
                 .background(LinearGradient(gradient: Gradient(colors: [Color("Dark Ocean"), Color("dos")]), startPoint: .leading, endPoint: .trailing) )
                // .clipShape(Circle())
@@ -49,6 +50,7 @@ struct ContentView: View {
                 .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
                 .cornerRadius(45)
                 .shadow(color: Color("dos"), radius: 10, x: 5, y: 5)
+                    .padding(.horizontal, 30)
             }
             
         }
