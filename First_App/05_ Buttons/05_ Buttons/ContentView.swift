@@ -43,11 +43,12 @@ struct ContentView: View {
                     Text("Eliminar")
                 }
                 .padding()
-                .background(Color(#colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)))
+                .background(LinearGradient(gradient: Gradient(colors: [Color("Dark Ocean"), Color("dos")]), startPoint: .leading, endPoint: .trailing) )
                // .clipShape(Circle())
                 .font(.largeTitle)
                 .foregroundColor(Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
-                .cornerRadius(40)
+                .cornerRadius(45)
+                .shadow(color: Color("dos"), radius: 10, x: 5, y: 5)
             }
             
         }
