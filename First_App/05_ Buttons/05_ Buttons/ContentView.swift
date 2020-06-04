@@ -92,5 +92,6 @@ struct BasicButtonStyle: ButtonStyle {
             .cornerRadius(45)
             .shadow(color: Color("dos"), radius: 10, x: 5, y: 5)
             .padding(.horizontal, 30)
+            .scaleEffect(configuration.isPressed ? 0.8 : 1.0)
     }
 }
