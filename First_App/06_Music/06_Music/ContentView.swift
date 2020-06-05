@@ -9,12 +9,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    private var isPlaying = false
+   @State private var isPlaying = false
     
-    var body: some View {
+     var body: some View {
         
         Button(action: {
-            print("Boton pulsado")
+            self.isPlaying.toggle()
         }) {
             Image(systemName: isPlaying ? "stop.circle.fill" : "play.circle.fill")
             .font(.system(size: 100))
