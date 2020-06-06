@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A615BAE248BFC54003C8300 /* PieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A615BAD248BFC54003C8300 /* PieView.swift */; };
 		5A76D1E7248B1EC40068F40D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A76D1E6248B1EC40068F40D /* AppDelegate.swift */; };
 		5A76D1E9248B1EC40068F40D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A76D1E8248B1EC40068F40D /* SceneDelegate.swift */; };
 		5A76D1EB248B1EC40068F40D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A76D1EA248B1EC40068F40D /* ContentView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A615BAD248BFC54003C8300 /* PieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieView.swift; sourceTree = "<group>"; };
 		5A76D1E3248B1EC40068F40D /* 07_Draw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 07_Draw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A76D1E6248B1EC40068F40D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A76D1E8248B1EC40068F40D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +42,7 @@
 		5A76D1DA248B1EC40068F40D = {
 			isa = PBXGroup;
 			children = (
+				5A615BAD248BFC54003C8300 /* PieView.swift */,
 				5A76D1E5248B1EC40068F40D /* 07_Draw */,
 				5A76D1E4248B1EC40068F40D /* Products */,
 			);
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A76D1E7248B1EC40068F40D /* AppDelegate.swift in Sources */,
+				5A615BAE248BFC54003C8300 /* PieView.swift in Sources */,
 				5A76D1E9248B1EC40068F40D /* SceneDelegate.swift in Sources */,
 				5A76D1EB248B1EC40068F40D /* ContentView.swift in Sources */,
 			);
