@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5A615BAE248BFC54003C8300 /* PieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A615BAD248BFC54003C8300 /* PieView.swift */; };
+		5A615BB0248C6B7A003C8300 /* Project0.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A615BAF248C6B7A003C8300 /* Project0.swift */; };
+		5A615BB2248C75C2003C8300 /* project1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A615BB1248C75C2003C8300 /* project1.swift */; };
 		5A76D1E7248B1EC40068F40D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A76D1E6248B1EC40068F40D /* AppDelegate.swift */; };
 		5A76D1E9248B1EC40068F40D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A76D1E8248B1EC40068F40D /* SceneDelegate.swift */; };
 		5A76D1EB248B1EC40068F40D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A76D1EA248B1EC40068F40D /* ContentView.swift */; };
@@ -18,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		5A615BAD248BFC54003C8300 /* PieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieView.swift; sourceTree = "<group>"; };
+		5A615BAF248C6B7A003C8300 /* Project0.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project0.swift; sourceTree = "<group>"; };
+		5A615BB1248C75C2003C8300 /* project1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = project1.swift; sourceTree = "<group>"; };
 		5A76D1E3248B1EC40068F40D /* 07_Draw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 07_Draw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A76D1E6248B1EC40068F40D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A76D1E8248B1EC40068F40D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +66,8 @@
 				5A76D1E6248B1EC40068F40D /* AppDelegate.swift */,
 				5A76D1E8248B1EC40068F40D /* SceneDelegate.swift */,
 				5A76D1EA248B1EC40068F40D /* ContentView.swift */,
+				5A615BAF248C6B7A003C8300 /* Project0.swift */,
+				5A615BB1248C75C2003C8300 /* project1.swift */,
 				5A76D1EC248B1EC50068F40D /* Assets.xcassets */,
 				5A76D1F1248B1EC50068F40D /* LaunchScreen.storyboard */,
 				5A76D1F4248B1EC50068F40D /* Info.plist */,
@@ -151,8 +157,10 @@
 			files = (
 				5A76D1E7248B1EC40068F40D /* AppDelegate.swift in Sources */,
 				5A615BAE248BFC54003C8300 /* PieView.swift in Sources */,
+				5A615BB0248C6B7A003C8300 /* Project0.swift in Sources */,
 				5A76D1E9248B1EC40068F40D /* SceneDelegate.swift in Sources */,
 				5A76D1EB248B1EC40068F40D /* ContentView.swift in Sources */,
+				5A615BB2248C75C2003C8300 /* project1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
