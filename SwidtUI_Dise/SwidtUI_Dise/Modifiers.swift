@@ -36,3 +36,4 @@ struct CustomFontModifier: ViewModifier {
         content.font(.custom("LibreCaslonText-Italic.ttf", size: 28))
     }
 }
+

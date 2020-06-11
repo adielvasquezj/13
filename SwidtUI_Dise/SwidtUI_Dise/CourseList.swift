@@ -17,6 +17,7 @@ struct CourseList: View {
     @State var activeView = CGSize.zero
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
     @State var isScrolable = false
+    
     var body: some View {
         GeometryReader { bounds in
             ZStack {

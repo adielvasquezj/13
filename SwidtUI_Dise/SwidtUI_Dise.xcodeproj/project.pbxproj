@@ -236,9 +236,9 @@
 				5A706646246D628B00482080 /* SceneDelegate.swift */,
 				5AE8AEDB246B99EB006B1709 /* ContentView.swift */,
 				5A706648246D6A3800482080 /* RingView.swift */,
+				5AE8AF0D246CA290006B1709 /* HomeView.swift */,
 				5A70664A246D9C3800482080 /* Modifiers.swift */,
 				5AE8AF09246C906A006B1709 /* Home.swift */,
-				5AE8AF0D246CA290006B1709 /* HomeView.swift */,
 				5A4B39AE2476026500747CD2 /* LoginView.swift */,
 				5A73E11724804B15001EC194 /* UserStore.swift */,
 				5A70665D246DD39E00482080 /* CourseList.swift */,
@@ -744,7 +744,7 @@
 				DEVELOPMENT_TEAM = LR77JW47YC;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwidtUI_Dise/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -766,7 +766,7 @@
 				DEVELOPMENT_TEAM = LR77JW47YC;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwidtUI_Dise/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
